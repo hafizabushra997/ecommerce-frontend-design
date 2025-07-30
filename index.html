@@ -1,11 +1,752 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/section-style.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container headerSection flex">
+        <div class="brandLogo">
+          <a href="#"><img src="assets/images/logo-colored.png" alt="" /></a>
+        </div>
+        <div class="searchForm flex">
+          <input type="text" placeholder="Search" class="searchInput" />
+          <select class="categorySelect">
+            <option value="all">All category</option>
+          </select>
+          <button class="searchBtn btn-text btn-primary">Search</button>
+        </div>
+          <ul class="userActions flex">
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/profile.png" alt="" />
+                <span class="text-small"
+                  >Profile</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/message.png" alt="" /><span class="text-small"
+                  >Message</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/orders.png" alt="" /><span class="text-small"
+                  >Orders</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/cart.png" alt="" /><span class="text-small"
+                  >My cart</span
+                ></a
+              >
+            </li>
+          </ul>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+      <div class="container navbar flex">
+        <div class="navList flex text-title">
+          <a href="#" class="menuIcon flex"
+            ><img src="assets/icons/menu.png" alt=""
+          /></a>
+          <a href="#">All category</a>
+          <a href="#">Hot offers</a>
+          <a href="#">Gift boxes</a>
+          <a href="#">Projects</a>
+          <a href="#">Menu item</a>
+          <!-- <select class="helpSelect text-title">
+            <option>Help</option>
+            <option>help</option>
+          </select> -->
+          <div class="shipToSelect flex">
+            <a href="#">
+            <span>Help</span>
+            <img src="assets/icons/dropdown.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="rightNavlist flex text-title">
+            <select id="paymentSelect" class="text-title">
+  <option value="" selected>English, USD</option>
+  <option value="">Deutsch, EUR</option>
+</select>
+
+
+          <div class="shipToSelect flex">
+            <span>Ship to</span>
+            <img src="assets/images/flag-image.png" alt="" />
+            <a href="#">
+              <img src="assets/icons/dropdown.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section / Main Section-->
+    <section id="heroSection">
+      <div class="container heroContainer flex">
+        <ul class="menu flex">
+          <li><a href="#" class="text-base active">Automobiles</a></li>
+          <li><a href="#" class="text-base">Clothesand wear</a></li>
+          <li><a href="#" class="text-base">Home interiors</a></li>
+          <li><a href="#" class="text-base">Computer and tech</a></li>
+          <li><a href="#" class="text-base">Tools, equipments</a></li>
+          <li><a href="#" class="text-base">Sports and outdoor</a></li>
+          <li><a href="#" class="text-base">Animal and pets</a></li>
+          <li><a href="#" class="text-base">Machinery Tools</a></li>
+          <li><a href="#" class="text-base">More category</a></li>
+        </ul>
+        <div class="banner flex">
+          <div class="bannerText">
+            <p>Latest trending</p>
+            <h1>Electronic items</h1>
+          </div>
+          <button class="btn-basic btn-text">Learn more</button>
+        </div>
+        <div class="rightHeroSecDiv flex">
+          <div class="getStartedDiv flex">
+            <div class="avatarDiv flex">
+              <img src="assets/icons/Avatar.png" alt="" />
+              <p class="text-base">
+                Hi, user <br />
+                let’s get stated
+              </p>
+            </div>
+            <button class="btn-text btn-primary joinNow">Join now</button>
+            <button class="btn-text btn-basic logIn">Log in</button>
+          </div>
+          <div class="supplierOfferDiv flex">
+            <p class="text-base">
+              Get US $10 off <br />
+              with a new <br />
+              supplier
+            </p>
+          </div>
+          <div class="sendQuoteDiv flex">
+            <p class="text-base">
+              Send quotes with <br />
+              supplier <br />
+              preferences
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flash Sale / Special Deal Section-->
+    <section id="dealsSection">
+            <div class="container dealsContainer flex">
+              <div class="countDown flex">
+                <div class="countDownHead">
+                  <p class="title-h4">
+                  Deals and offers
+                </p>
+                <p class="text-base subText">
+                  Hygiene equipments                
+                </p>
+                </div>
+                <div class="time flex">
+                  <div class="timeBox" id="days">
+                    <p class="timeNumber">
+                      04
+                    </p>
+                    <p class="timeText text-small">
+                      Days
+                    </p>
+                  </div>
+                  <div class="timeBox" id="hours">
+                    <p class="timeNumber">
+                      13
+                    </p>
+                    <p class="timeText text-small">
+                      Hour
+                    </p>
+                  </div>
+                  <div class="timeBox" id="minute">
+                    <p class="timeNumber">
+                      34
+                    </p>
+                    <p class="timeText text-small">
+                      Min
+                    </p>
+                  </div>
+                  <div class="timeBox" id="second">
+                    <p class="timeNumber">
+                      56
+                    </p>
+                    <p class="timeText text-small">
+                      Sec
+                    </p>
+                  </div>
+                </div>
+            
+              </div>
+              <div class="dealsItems flex">
+                <div class="dealCard flex">
+                  <img src="assets/images/tech/8.jpg" alt="">
+                  <p class="text-normal">
+                    Smart Watches
+                  </p>
+                  <p class="offerText">
+                    -25%
+                  </p>
+                </div>
+                <div class="dealCard flex">
+                  <img src="assets/images/tech/7.jpg" alt="">
+                  <p class="text-normal">
+                    Laptops
+                  </p>
+                  <p class="offerText">
+                    -15%
+                  </p>
+                </div>
+                <div class="dealCard flex">
+                  <img src="assets/images/tech/6.jpg" alt="">
+                  <p class="text-normal">
+                    GoPro Cameras
+                  </p>
+                  <p class="offerText">
+                    -40%
+                  </p>
+                </div>
+                <div class="dealCard flex">
+                  <img src="assets/images/tech/5.jpg" alt="">
+                  <p class="text-normal">
+                    Headphones
+                  </p>
+                  <p class="offerText">
+                    -25%
+                  </p>
+                </div>
+                <div class="dealCard flex">
+                  <img src="assets/images/tech/3.jpg" alt="">
+                  <p class="text-normal">
+                    Canon Cameras
+                  </p>
+                  <p class="offerText">
+                    -25%
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+    </section>
+
+    <!-- Top Categories /  Home and Outdoor-->
+    <section class="categorySection">
+            <div class="container categoryContainer flex">
+              <div class="categoryBanner homeCategorybanner flex">
+                <h2>Home<br> and outdoor</h2>
+          <button class="btn-basic btn-text">Source now</button>
+              </div>
+              <div class="itemsContainer flex">
+                <div class="itemsRow itemsRow1 flex">
+                  <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Soft chairs</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/1.jpg" alt="">
+                  </div>
+                 <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Sofa & chair</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/2.jpg" alt="">
+                  </div>
+                  <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">kitchen dishes</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/3.jpg" alt="">
+                  </div>
+                 <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Decoration pieces</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/4.jpg" alt="">
+                  </div>
+                </div>
+                <div class="itemsRow flex">
+                  <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Mattresses</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/5.jpg" alt="">
+                  </div>
+                 <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Table lamps</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/6.jpg" alt="">
+                  </div>
+                  <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Home appliances</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/7.jpg" alt="">
+                  </div>
+                 <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Kitchen Mixer</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/9.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+    </section>
+
+    <!-- Top Categories / Consumer Electronics-->
+    <section class="categorySection">
+            <div class="container categoryContainer flex">
+              <div class="categoryBanner electronicsCategorybanner flex">
+                <h2>Consumer<br> electronics and <br> gadgets</h2>
+          <button class="btn-basic btn-text">Source now</button>
+              </div>
+              <div class="itemsContainer flex">
+                <div class="itemsRow itemsRow1 flex">
+                  <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Soft chairs</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/1.jpg" alt="">
+                  </div>
+                 <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Sofa & chair</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/2.jpg" alt="">
+                  </div>
+                  <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">kitchen dishes</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/3.jpg" alt="">
+                  </div>
+                 <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Decoration pieces</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/4.jpg" alt="">
+                  </div>
+                </div>
+                <div class="itemsRow flex">
+                  <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Mattresses</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/5.jpg" alt="">
+                  </div>
+                 <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Table lamps</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/6.jpg" alt="">
+                  </div>
+                  <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Home appliances</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/7.jpg" alt="">
+                  </div>
+                 <div class="itemCard flex">
+                    <div class="itemDetails">
+                      <p class="text-base itemHead">Kitchen Mixer</p>
+                      <p class="text-small itemText">From <br/> USD 19</p>
+                    </div>
+                    <img src="assets/images/interior/9.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+    </section>
+
+    <!-- Inquiry Section -->
+    <section id="inquirySection">
+      <div class="container inquiryContainer flex">
+        <div class="inquiryInfo flex">
+          <p class="title-h2">
+            An easy way to send <br> requests to all suppliers
+          </p>
+          <p class="text-info">
+            Lorem ipsum dolor sit amet, consectetur adipisicing <br> elit, sed do eiusmod tempor incididunt.
+          </p>
+        </div>
+          <form action="#" class="inquiryForm flex">
+            <p class="title-h4">
+              Send quote to suppliers
+            </p>
+            <input type="text" id="inquiryInput" 
+             class="input-basic" placeholder="What item you need?">
+            <textarea name="inquiryDetails" id="inquiryDetails" class="input-basic" placeholder="Type more details"></textarea>
+            <div class="quantitySelectContainer flex">
+  <input type="text" id="quantityInput" class="input-basic" placeholder="Quantity">
+  
+  <select id="inquirySelect" class="input-basic">
+  <option value="" disabled selected hidden>Pcs</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+</select>
+
+</div>
+
+            <button class="inquiryBtn btn-text btn-primary">Send inquiry</button>
+          </form>
+        
+      </div>
+    </section>
+
+    <!-- Recommended Section -->
+    <section id="recommendedSection">
+      <div class="recommendedContainer container flex">
+        <p class="title-h3">Recommended Items</p>
+        <div class="cardsContainer flex">
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          
+        </div>
+        <div class="cardsContainer flex">
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          <div class="recommendedCard flex">
+            <img src="assets/images/cloth/1.jpg" alt="">
+            <div class="cardDetails flex">
+            <p class="text-title">$10.30</p>
+            <p class="text-info">T-shirts with multiple colors, for men</p>
+              </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicesSection">
+       <div class="servicesContainer container flex">
+        <p class="title-h3">Our extra services</p>
+        <div class="cardsContainer flex">
+
+          <div id="serviceCard1" class="serviceCard flex">
+            <img src="assets/images/services/card1.png" alt="">
+            <div class="cardDetails">
+            <p class="text-title">Source from Industry Hubs</p>
+          </div>
+            <button class="serviceBtn flex">
+              <img src="assets/icons/search.png" alt="">
+            </button>
+          
+        </div>
+        
+          <div id="serviceCard2" class="serviceCard flex">
+            <img src="assets/images/services/card2.png" alt="">
+            <div class="cardDetails">
+            <p class="text-title">Customize Your Products</p>
+            
+          </div>
+          <button class="serviceBtn flex">
+              <img src="assets/icons/inventory.png" alt="">
+            </button>
+          
+        </div>
+        
+          <div id="serviceCard3" class="serviceCard flex">
+            <img src="assets/images/services/card3.png" alt="">
+            <div class="cardDetails">
+            <p class="text-title">Fast, reliable shipping by ocean or air</p>
+            
+          </div>
+          <button class="serviceBtn flex">
+              <img src="assets/icons/send.png" alt="">
+            </button>
+          
+        </div>
+        
+          <div id="serviceCard4" class="serviceCard flex">
+            <img src="assets/images/services/card4.png" alt="">
+            <div class="cardDetails">
+            <p class="text-title">Product monitoring and inspection</p>
+            
+          </div>
+          <button class="serviceBtn flex">
+              <img src="assets/icons/security.png" alt="">
+            </button>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Country Section -->
+    <section id="countrySection">
+      <div class="countryContainer container flex">
+        <p class="title-h3">Suppliers by region</p>
+        <div class="cardsContainer flex">
+
+         <div id="countryCard1" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+        <div id="countryCard2" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+        <div id="countryCard3" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+        <div id="countryCard4" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+        <div id="countryCard5" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+      </div>
+       <div class="cardsContainer flex">
+
+         <div id="countryCard6" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+        <div id="countryCard7" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+        <div id="countryCard8" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+        <div id="countryCard9" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+        <div id="countryCard10" class="countryCard flex">
+            <img src="assets/images/flags/arab-emirates.png" alt="">
+            <div class="cardDetails">
+            <p class="text-info">Arabic Emirates</p>
+            <p class="text-small">shopname.ae</p>
+          </div>
+            
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletterSection">
+            <div class="newsletterContainer container flex">
+            <div class="head flex">
+              <p class="title-h4">
+                Subscribe on our newsletter
+              </p>
+              <p class="text-info">
+                Get daily news on upcoming offers from many suppliers all over the world
+              </p>
+            </div>
+                  <form class="newsletterForm flex">
+      <div class="inputGroup">
+        <img src="assets/icons/email.png" alt="Email Icon" class="emailIcon">
+        <input type="email" class="input-basic" placeholder="Email"  required>
+      </div>
+      <button type="submit" class="btn-primary btn-text">Subscribe</button>
+    </form>
+
+            </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <section class="container mainFooter flex">
+          <div class="brandLogoCol flex columns">
+            <img src="assets/images/logo-colored.png" alt="" />
+            <p class="text-info">
+              Best information about the company gies here but now lorem ipsum
+              is
+            </p>
+            <div class="socialIcons flex">
+              <img src="assets/icons/facebook3.png" alt="" />
+              <img src="assets/icons/twitter3.png" alt="" />
+              <img src="assets/icons/linkedin3.png" alt="" />
+              <img src="assets/icons/instagram3.png" alt="" />
+              <img src="assets/icons/youtube3.png" alt="" />
+            </div>
+          </div>
+          <div class="aboutCol flex columns">
+            <p class="text-title">About</p>
+            <a href="#" class="text-info">About Us</a>
+            <a href="#" class="text-info">Find store</a>
+            <a href="#" class="text-info">Categories</a>
+            <a href="#" class="text-info">Blogs</a>
+          </div>
+          <div class="prtnershipCol flex columns">
+            <p class="text-title">Partnership</p>
+            <a href="#" class="text-info">About Us</a>
+            <a href="#" class="text-info">Find store</a>
+            <a href="#" class="text-info">Categories</a>
+            <a href="#" class="text-info">Blogs</a>
+          </div>
+          <div class="infoCol flex columns">
+            <p class="text-title">Information</p>
+            <a href="#" class="text-info">Help Center</a>
+            <a href="#" class="text-info">Money Refund</a>
+            <a href="#" class="text-info">Shipping</a>
+            <a href="#" class="text-info">Contact Us</a>
+          </div>
+          <div class="forUsersCol flex columns">
+            <p class="text-title">For Users</p>
+            <a href="#" class="text-info">Login</a>
+            <a href="#" class="text-info">Register</a>
+            <a href="#" class="text-info">Settings</a>
+            <a href="#" class="text-info">My Orders</a>
+          </div>
+          <div class="getAppCol flex columns">
+            <p class="text-title">Get app</p>
+            <img src="assets/images/market-button.png" alt="" />
+            <img src="assets/images/google-play.png" alt="" />
+          </div>
+        </section>
+      
+                <section class="subFooterSection">
+        <div class="container subFooter flex">
+          <p class="text-sm text-center sm:text-left">© 2023 Ecommerce.</p>
+          <div class="rightDiv flex">
+            <img src="assets/images/flag-image.png" alt="" />
+            <span>English</span>
+            <a href="#">
+              <img src="assets/icons/expand_less.png" alt="" />
+            </a>
+          </div>
+        
+        </div>
+                </section>
+    </footer>
+  </body>
 </html>

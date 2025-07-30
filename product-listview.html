@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/section-style.css" />
+    <link rel="stylesheet" href="css/product-listview.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container headerSection flex">
+        <div class="brandLogo">
+          <a href="#"><img src="assets/images/logo-colored.png" alt="" /></a>
+        </div>
+        <div class="searchForm flex">
+          <input type="text" placeholder="Search" class="searchInput" />
+          <select class="categorySelect">
+            <option value="all">All category</option>
+          </select>
+          <button class="searchBtn btn-text btn-primary">Search</button>
+        </div>
+          <ul class="userActions flex">
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/profile.png" alt="" />
+                <span class="text-small"
+                  >Profile</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/message.png" alt="" /><span class="text-small"
+                  >Message</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/orders.png" alt="" /><span class="text-small"
+                  >Orders</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/cart.png" alt="" /><span class="text-small"
+                  >My cart</span
+                ></a
+              >
+            </li>
+          </ul>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+      <div class="container navbar flex">
+        <div class="navList flex text-title">
+          <a href="#" class="menuIcon flex"
+            ><img src="assets/icons/menu.png" alt=""
+          /></a>
+          <a href="#">All category</a>
+          <a href="#">Hot offers</a>
+          <a href="#">Gift boxes</a>
+          <a href="#">Projects</a>
+          <a href="#">Menu item</a>
+          <!-- <select class="helpSelect text-title">
+            <option>Help</option>
+            <option>help</option>
+          </select> -->
+          <div class="shipToSelect flex">
+            <a href="#">
+            <span>Help</span>
+            <img src="assets/icons/dropdown.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="rightNavlist flex text-title">
+            <select id="paymentSelect" class="text-title">
+  <option value="" selected>English, USD</option>
+  <option value="">Deutsch, EUR</option>
+</select>
+
+
+          <div class="shipToSelect flex">
+            <span>Ship to</span>
+            <img src="assets/images/flag-image.png" alt="" />
+            <a href="#">
+              <img src="assets/icons/dropdown.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+      <!-- Breadcrumb Section -->
+       <section id="breadcrumbSection">
+      <div class="container breadcrumbContainer flex">
+<ul class="breadcrumb flex text-info">
+  <li>Home</li>
+  <li>Clothings</li>
+  <li>Men's wear</li>
+  <li>Summer Clothing</li>
+</ul>
+  </div>
+</section>
+
+  <!--  Main Content -->
+  <main class="listview-main container flex">
+        <div class="mainContainer flex">
+
+   <!-- Sidebar -->
+<aside class="sidebar">
+
+  <!-- Sidebar Sections -->
+  <div class="sidebar-section">
+    <div class="sidebar-header flex">
+      <p class="title-h6">Category</p>
+      <button class="toggle-arrow">
+        <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+      </button>
+    </div>
+    <ul class="sidebar-content">
+      <li class="text-base">Mobile accessory</li>
+      <li class="text-base">Electronics</li>
+      <li class="text-base">Smartphones</li>
+      <li class="text-base">Modern tech</li>
+      <li class="text-base"><a href="#">See all</a></li>
+    </ul>
+  </div>
+
+  <!-- Brands -->
+  <div class="sidebar-section">
+    <div class="sidebar-header flex">
+    <p class="title-h6">Brands</p>
+
+      <button class="toggle-arrow">
+               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+      </button>
+    </div>
+    <ul class="sidebar-content">
+      <li><label><input type="checkbox"> Samsung</label></li>
+      <li><label><input type="checkbox"> Apple</label></li>
+      <li><label><input type="checkbox"> Huawei</label></li>
+      <li><label><input type="checkbox"> Poco</label></li>
+      <li><label><input type="checkbox"> Lenovo</label></li>
+      <li><a href="#">See all</a></li>
+    </ul>
+  </div>
+
+  <!-- Features -->
+  <div class="sidebar-section">
+    <div class="sidebar-header flex">
+    <p class="title-h6">Features</p>
+
+      <button class="toggle-arrow">
+               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+      </button>
+    </div>
+    <ul class="sidebar-content">
+      <li><label><input type="checkbox"> Metallic</label></li>
+      <li><label><input type="checkbox"> Plastic cover</label></li>
+      <li><label><input type="checkbox"> 8GB Ram</label></li>
+      <li><label><input type="checkbox"> Super power</label></li>
+      <li><label><input type="checkbox"> Large Memory</label></li>
+      <li><a href="#">See all</a></li>
+    </ul>
+  </div>
+
+  <!-- Price Range -->
+  <div class="sidebar-section">
+    <div class="sidebar-header flex">
+    <p class="title-h6">Price Range</p>
+
+      <button class="toggle-arrow">
+               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+      </button>
+    </div>
+    <div class="sidebar-content">
+      <input type="range" min="0" max="1000" />
+      <div class="price-inputs flex">
+        <input type="number" placeholder="Min" />
+        <input type="number" placeholder="Max" />
+      </div>
+      <button class="apply-btn btn-text btn-basic">Apply</button>
+    </div>
+  </div>
+
+  <!-- Condition -->
+  <div class="sidebar-section">
+    <div class="sidebar-header flex">
+    <p class="title-h6">Conditions</p>
+
+      <button class="toggle-arrow">
+               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+      </button>
+    </div>
+    <ul class="sidebar-content">
+      <li><label><input type="radio" name="condition"> Any</label></li>
+      <li><label><input type="radio" name="condition"> Refurbished</label></li>
+      <li><label><input type="radio" name="condition"> Brand new</label></li>
+      <li><label><input type="radio" name="condition"> Old items</label></li>
+    </ul>
+  </div>
+
+  <!-- Ratings -->
+  <div class="sidebar-section">
+   <div class="sidebar-header flex">
+    <p class="title-h6">Ratings</p>
+
+      <button class="toggle-arrow">
+               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+      </button>
+    </div> 
+    <ul class="sidebar-content">
+      <li><label><input type="checkbox"> <img src="assets/icons/5-star-rating.svg" alt=""></label></li>
+      <li><label><input type="checkbox"> <img src="assets/icons/4-star-rating.svg" alt=""></label></li>
+      <li><label><input type="checkbox"> <img src="assets/icons/3-star-rating.svg" alt=""></label></li>
+      <li><label><input type="checkbox"> <img src="assets/icons/2-star-rating.svg" alt=""></label></li>
+      </ul>
+  </div>
+</aside>
+
+    <!-- Main Content -->
+     <div class="mainContent flex container">
+
+        <!-- Page Title Section -->
+<section class="pageTitle container flex">
+  <p class="text-base"><span>12,911</span> items in <strong class="title-h6">Mobile accessory</strong></p>
+
+  <div class="pageTitleActions flex">
+    <label class="verifiedCheck flex">
+      <input type="checkbox" />
+      <span>Verified only</span>
+    </label>
+
+    <select class="sortDropdown text-base">
+      <option value="featured">Featured</option>
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+    </select>
+
+    <div class="viewToggleBtns flex">
+        <button class="toggleBtn"><img src="assets/icons/gridview.svg" alt=""></button>
+        <button class="toggleBtn active"><img src="assets/icons/listview.svg" alt=""></button>
+    </div>
+  </div>
+</section>
+
+       <!-- Product List -->
+      <section class="productList flex">
+
+        <!-- Product Card#1 -->
+  <div class="productCard flex">
+    <img src="assets/images/tech/1.jpg" alt="Product Image">
+    <div class="productInfo flex">
+      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+      <div class="priceRow">
+        <span class="price title-h4">$998.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="#" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+    <button class="favBtn">
+      <img src="assets/icons/blue_heart.svg" alt="">
+    </button>
+  </div>
+
+          <!-- Product Card#2 -->
+
+  <div class="productCard flex">
+    <img src="assets/images/tech/2.jpg" alt="Product Image">
+    <div class="productInfo flex">
+      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+      <div class="priceRow">
+        <span class="price title-h4">$998.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="#" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+    <button class="favBtn">
+      <img src="assets/icons/blue_heart.svg" alt="">
+    </button>
+  </div>
+  
+          <!-- Product Card#3 -->
+
+  <div class="productCard flex">
+    <img src="assets/images/tech/6.jpg" alt="Product Image">
+    <div class="productInfo flex">
+      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+      <div class="priceRow">
+        <span class="price title-h4">$998.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="#" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+    <button class="favBtn">
+      <img src="assets/icons/blue_heart.svg" alt="">
+    </button>
+  </div>
+
+          <!-- Product Card#4 -->
+
+  <div class="productCard flex">
+    <img src="assets/images/tech/7.jpg" alt="Product Image">
+    <div class="productInfo flex">
+      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+      <div class="priceRow">
+        <span class="price title-h4">$998.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="#" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+    <button class="favBtn">
+      <img src="assets/icons/blue_heart.svg" alt="">
+    </button>
+  </div>
+
+          <!-- Product Card#5 -->
+
+  <div class="productCard flex">
+    <img src="assets/images/tech/8.jpg" alt="Product Image">
+    <div class="productInfo flex">
+      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+      <div class="priceRow">
+        <span class="price title-h4">$998.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="#" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+    <button class="favBtn">
+      <img src="assets/icons/blue_heart.svg" alt="">
+    </button>
+  </div>
+
+          <!-- Product Card#6 -->
+
+  <div class="productCard flex">
+    <img src="assets/images/tech/9.jpg" alt="Product Image">
+    <div class="productInfo flex">
+      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+      <div class="priceRow">
+        <span class="price title-h4">$998.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="#" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+    <button class="favBtn">
+      <img src="assets/icons/blue_heart.svg" alt="">
+    </button>
+  </div>
+</section>
+  </div>
+    </div>
+
+   <!-- Pagination Section-->
+<div class="paginationSection flex">
+  <div class="paginationInfo">
+    <select class="input-basic">
+      <option>Show 10</option>
+      <option>Show 20</option>
+      <option>Show 30</option>
+    </select>
+  </div>
+  <div class="paginationControls flex">
+    <button class="pageBtn btn-text arrowBtn active">&lt;</button>
+    <button class="pageBtn btn-text active">1</button>
+    <button class="pageBtn btn-text">2</button>
+    <button class="pageBtn btn-text">3</button>
+    <button class="pageBtn btn-text arrowBtn">&gt;</button>
+  </div>
+</div>
+
+  </main>
+
+     <!-- Newsletter Section -->
+    <section id="newsletterSection">
+            <div class="newsletterContainer container flex">
+            <div class="head flex">
+              <p class="title-h4">
+                Subscribe on our newsletter
+              </p>
+              <p class="text-info">
+                Get daily news on upcoming offers from many suppliers all over the world
+              </p>
+            </div>
+                  <form class="newsletterForm flex">
+      <div class="inputGroup">
+        <img src="assets/icons/email.png" alt="Email Icon" class="emailIcon">
+        <input type="email" class="input-basic" placeholder="Email"  required>
+      </div>
+      <button type="submit" class="btn-primary btn-text">Subscribe</button>
+    </form>
+
+            </div>
+
+    </section>
+
+   
+    <!-- Footer -->
+    <footer>
+        <section class="container mainFooter flex">
+          <div class="brandLogoCol flex columns">
+            <img src="assets/images/logo-colored.png" alt="" />
+            <p class="text-info">
+              Best information about the company gies here but now lorem ipsum
+              is
+            </p>
+            <div class="socialIcons flex">
+              <img src="assets/icons/facebook3.png" alt="" />
+              <img src="assets/icons/twitter3.png" alt="" />
+              <img src="assets/icons/linkedin3.png" alt="" />
+              <img src="assets/icons/instagram3.png" alt="" />
+              <img src="assets/icons/youtube3.png" alt="" />
+            </div>
+          </div>
+          <div class="aboutCol flex columns">
+            <p class="text-title">About</p>
+            <a href="#" class="text-info">About Us</a>
+            <a href="#" class="text-info">Find store</a>
+            <a href="#" class="text-info">Categories</a>
+            <a href="#" class="text-info">Blogs</a>
+          </div>
+          <div class="prtnershipCol flex columns">
+            <p class="text-title">Partnership</p>
+            <a href="#" class="text-info">About Us</a>
+            <a href="#" class="text-info">Find store</a>
+            <a href="#" class="text-info">Categories</a>
+            <a href="#" class="text-info">Blogs</a>
+          </div>
+          <div class="infoCol flex columns">
+            <p class="text-title">Information</p>
+            <a href="#" class="text-info">Help Center</a>
+            <a href="#" class="text-info">Money Refund</a>
+            <a href="#" class="text-info">Shipping</a>
+            <a href="#" class="text-info">Contact Us</a>
+          </div>
+          <div class="forUsersCol flex columns">
+            <p class="text-title">For Users</p>
+            <a href="#" class="text-info">Login</a>
+            <a href="#" class="text-info">Register</a>
+            <a href="#" class="text-info">Settings</a>
+            <a href="#" class="text-info">My Orders</a>
+          </div>
+          <div class="getAppCol flex columns">
+            <p class="text-title">Get app</p>
+            <img src="assets/images/market-button.png" alt="" />
+            <img src="assets/images/google-play.png" alt="" />
+          </div>
+        </section>
+      
+                <section class="subFooterSection">
+        <div class="container subFooter flex">
+          <p class="text-sm text-center sm:text-left">© 2023 Ecommerce.</p>
+          <div class="rightDiv flex">
+            <img src="assets/images/flag-image.png" alt="" />
+            <span>English</span>
+            <a href="#">
+              <img src="assets/icons/expand_less.png" alt="" />
+            </a>
+          </div>
+        
+        </div>
+                </section>
+    </footer>
+<script src="js/product-list.js"></script>
+  </body>
+</html>
