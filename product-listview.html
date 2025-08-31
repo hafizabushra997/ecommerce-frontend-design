@@ -10,17 +10,17 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
   </head>
   <body>
-    <!-- Header -->
+     <!-- Header -->
     <header>
       <div class="container headerSection flex">
         <div class="brandLogo">
-          <a href="#"><img src="assets/images/logo-colored.png" alt="" /></a>
+          <a href="index.html"><img src="assets/images/logo-colored.png" alt="" /></a>
         </div>
         <div class="searchForm flex">
           <input type="text" placeholder="Search" class="searchInput" />
-          <select class="categorySelect">
+          <!-- <select class="categorySelect">
             <option value="all">All category</option>
-          </select>
+          </select> -->
           <button class="searchBtn btn-text btn-primary">Search</button>
         </div>
           <ul class="userActions flex">
@@ -47,7 +47,7 @@
               >
             </li>
             <li>
-              <a href="#" class="flex"
+              <a href="cart.html" class="flex"
                 ><img src="assets/icons/cart.png" alt="" /><span class="text-small"
                   >My cart</span
                 ></a
@@ -61,42 +61,70 @@
     <nav>
       <div class="container navbar flex">
         <div class="navList flex text-title">
-          <a href="#" class="menuIcon flex"
-            ><img src="assets/icons/menu.png" alt=""
-          /></a>
-          <a href="#">All category</a>
+          <a href="product-listview.html" class="menuIcon flex">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z"/>
+  </svg>
+  <span>All category</span>
+</a>
           <a href="#">Hot offers</a>
           <a href="#">Gift boxes</a>
           <a href="#">Projects</a>
           <a href="#">Menu item</a>
-          <!-- <select class="helpSelect text-title">
-            <option>Help</option>
-            <option>help</option>
-          </select> -->
-          <div class="shipToSelect flex">
-            <a href="#">
-            <span>Help</span>
-            <img src="assets/icons/dropdown.png" alt="" />
-            </a>
-          </div>
+          <a href="#">Help</a>
+         
         </div>
-        <div class="rightNavlist flex text-title">
-            <select id="paymentSelect" class="text-title">
-  <option value="" selected>English, USD</option>
-  <option value="">Deutsch, EUR</option>
-</select>
+        <!-- Right Nav List -->
+<div class="rightNavlist flex text-title">
+    <select id="paymentSelect" class="text-title">
+        <option value="" selected>English, USD</option>
+        <option value="">Deutsch, EUR</option>
+    </select>
 
+    <!-- Custom Ship To Dropdown -->
+  <div class="dropdown shipToDropdown">
+    <button type="button" id="ship-to-btn" class="flex text-title">
+      <span>Ship to</span>
+      <img id="flag-image" src="assets/images/flags/us.png" alt="Flag"  height="18px">
+      <img src="assets/icons/dropdown.png" alt="▼">
+    </button>
 
-          <div class="shipToSelect flex">
-            <span>Ship to</span>
-            <img src="assets/images/flag-image.png" alt="" />
-            <a href="#">
-              <img src="assets/icons/dropdown.png" alt="" />
-            </a>
-          </div>
-        </div>
+        <ul id="ship-to-menu">
+            <li class="flex" data-country="USA" data-flag="assets/images/flags/us.png">
+              USA<img src="assets/images/flags/us.png" alt="">
+            </li>
+            <li class="flex" data-country="UK" data-flag="assets/images/flags/arab-emirates.png">
+              UK<img src="assets/images/flags/arab-emirates.png" alt="">
+            </li>
+            <li class="flex" data-country="Australia" data-flag="assets/images/flags/australia.png">
+              Australia<img src="assets/images/flags/australia.png" alt="">
+            </li>
+            <li class="flex" data-country="Bretain" data-flag="assets/images/flags/bretain.png">
+              Bretain<img src="assets/images/flags/bretain.png" alt="">
+            </li>
+            <li class="flex" data-country="China" data-flag="assets/images/flags/china.png">
+              China<img src="assets/images/flags/china.png" alt="">
+            </li>
+            <li class="flex" data-country="Denmark" data-flag="assets/images/flags/denmark.png">
+              Denmark<img src="assets/images/flags/denmark.png" alt="">
+            </li>
+            <li class="flex" data-country="France" data-flag="assets/images/flags/france.png">
+              France<img src="assets/images/flags/france.png" alt="">
+            </li>
+            <li class="flex" data-country="Italy" data-flag="assets/images/flags/italy.png">
+              Italy<img src="assets/images/flags/italy.png" alt="">
+            </li>
+            <li class="flex" data-country="Russia" data-flag="assets/images/flags/russia.png">
+              Russia<img src="assets/images/flags/russia.png" alt="">
+            </li>
+        </ul>
+    </div>
+
+</div>
+
       </div>
     </nav>
+
 
       <!-- Breadcrumb Section -->
        <section id="breadcrumbSection">
@@ -125,13 +153,17 @@
         <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
       </button>
     </div>
-    <ul class="sidebar-content">
-      <li class="text-base">Mobile accessory</li>
-      <li class="text-base">Electronics</li>
-      <li class="text-base">Smartphones</li>
-      <li class="text-base">Modern tech</li>
-      <li class="text-base"><a href="#">See all</a></li>
-    </ul>
+    <ul class="sidebar-content category-list">
+<li><a class="text-base filter-link active" data-category="all" href="product-listview.html">All Products</a></li>
+<li><a class="text-base filter-link" data-category="computer and tech" href="product-listview.html?category=computer%20and%20tech">Computer and tech</a></li>
+<li><a class="text-base filter-link" data-category="clothes and wear" href="product-listview.html?category=clothes%20and%20wear">Clothes and wear</a></li>
+<li><a class="text-base filter-link" data-category="home interiors" href="product-listview.html?category=home%20interiors">Home interiors</a></li>
+<li><a class="text-base filter-link" data-category="automobiles" href="product-listview.html?category=automobiles">Automobiles</a></li>
+  <li><a class="text-base filter-link" data-category="tools, equipments" href="product-listview.html?category=tools%2C%20equipments">Tools, equipments</a></li>
+  <li><a class="text-base filter-link" data-category="sports and outdoor" href="product-listview.html?category=sports%20and%20outdoor">Sports and outdoor</a></li>
+  <li><a class="text-base filter-link" data-category="animals and pets" href="product-listview.html?category=animals%20and%20pets">Animals and pets</a></li>
+  <li><a class="text-base filter-link" data-category="machinery tools" href="product-listview.html?category=machinery%20tools">Machinery Tools</a></li>
+  </ul>
   </div>
 
   <!-- Brands -->
@@ -182,7 +214,8 @@
       </button>
     </div>
     <div class="sidebar-content">
-      <input type="range" min="0" max="1000" />
+      <input  class="price-slider" type="range" min="0" max="1000" />
+           
       <div class="price-inputs flex">
         <input type="number" placeholder="Min" />
         <input type="number" placeholder="Max" />
@@ -218,10 +251,14 @@
       </button>
     </div> 
     <ul class="sidebar-content">
-      <li><label><input type="checkbox"> <img src="assets/icons/5-star-rating.svg" alt=""></label></li>
-      <li><label><input type="checkbox"> <img src="assets/icons/4-star-rating.svg" alt=""></label></li>
-      <li><label><input type="checkbox"> <img src="assets/icons/3-star-rating.svg" alt=""></label></li>
-      <li><label><input type="checkbox"> <img src="assets/icons/2-star-rating.svg" alt=""></label></li>
+      <li><label><input type="checkbox" id="ratingCheckbox" data-rating="5">
+         <img src="assets/icons/5-star-rating.svg" alt=""></label></li>
+      <li><label><input type="checkbox" id="ratingCheckbox" data-rating="4">
+         <img src="assets/icons/4-star-rating.svg" alt=""></label></li>
+      <li><label><input type="checkbox" id="ratingCheckbox" data-rating="3">
+         <img src="assets/icons/3-star-rating.svg" alt=""></label></li>
+      <li><label><input type="checkbox" id="ratingCheckbox" data-rating="2">
+         <img src="assets/icons/2-star-rating.svg" alt=""></label></li>
       </ul>
   </div>
 </aside>
@@ -231,7 +268,8 @@
 
         <!-- Page Title Section -->
 <section class="pageTitle container flex">
-  <p class="text-base"><span>12,911</span> items in <strong class="title-h6">Mobile accessory</strong></p>
+  <p class="text-base">
+    <span id="productsCountText">12,911</span>&nbsp;items in <strong class="title-h6" id="productCategoryText"></strong></p>
 
   <div class="pageTitleActions flex">
     <label class="verifiedCheck flex">
@@ -246,26 +284,27 @@
     </select>
 
     <div class="viewToggleBtns flex">
-        <button class="toggleBtn"><img src="assets/icons/gridview.svg" alt=""></button>
-        <button class="toggleBtn active"><img src="assets/icons/listview.svg" alt=""></button>
+        <button onclick="window.location.href='product-gridview.html'" class="toggleBtn"><img src="assets/icons/gridview.svg" alt=""></button>
+        <button onclick="window.location.href='product-listview.html'" class="toggleBtn active"><img src="assets/icons/listview.svg" alt=""></button>
     </div>
   </div>
 </section>
 
        <!-- Product List -->
-      <section class="productList flex">
-
+<section class="productList flex">
+        
+<!-- Computer and tech Category Products -->
         <!-- Product Card#1 -->
-  <div class="productCard flex">
+  <div class="product-card productCard flex" data-category="computer and tech"  data-rating="5">
     <img src="assets/images/tech/1.jpg" alt="Product Image">
     <div class="productInfo flex">
-      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+      <p class="text-title product-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
       <div class="priceRow">
-        <span class="price title-h4">$998.00</span>
+        <span class="price title-h4">$200.00</span>
         <span class="title-h6 oldPrice">$1128.00</span>
       </div>
       <div class="ratingRow flex">
-        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="rating text-base flex"><img src="assets/icons/5-star-rating.svg" alt="">5</span>
         <span class="no-of-orders">· 154 orders</span>
         <span class="freeShipping">· Free Shipping</span>
       </div>
@@ -273,26 +312,28 @@
       <p class="desc text-info">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua</p>
-      <a href="#" class="btn-text view-link">View details</a>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
       </div>
     </div>
-    <button class="favBtn">
-      <img src="assets/icons/blue_heart.svg" alt="">
+   <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
     </button>
   </div>
 
           <!-- Product Card#2 -->
 
-  <div class="productCard flex">
+  <div class="product-card productCard flex" data-category="computer and tech" data-rating="4">
     <img src="assets/images/tech/2.jpg" alt="Product Image">
     <div class="productInfo flex">
-      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+    <p class="text-title product-title">Xiaomi Redmi Note 10 - 6GB RAM, 128GB Storage</p>
       <div class="priceRow">
-        <span class="price title-h4">$998.00</span>
+        <span class="price title-h4">$300.00</span>
         <span class="title-h6 oldPrice">$1128.00</span>
       </div>
       <div class="ratingRow flex">
-        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">4</span>
         <span class="no-of-orders">· 154 orders</span>
         <span class="freeShipping">· Free Shipping</span>
       </div>
@@ -300,26 +341,28 @@ tempor incididunt ut labore et dolore magna aliqua</p>
       <p class="desc text-info">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua</p>
-      <a href="#" class="btn-text view-link">View details</a>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
       </div>
     </div>
-    <button class="favBtn">
-      <img src="assets/icons/blue_heart.svg" alt="">
+      <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
     </button>
   </div>
   
           <!-- Product Card#3 -->
 
-  <div class="productCard flex">
-    <img src="assets/images/tech/6.jpg" alt="Product Image">
+  <div class="product-card productCard flex" data-category="computer and tech"  data-rating="3">
+    <img src="assets/images/tech/3.jpg" alt="Product Image">
     <div class="productInfo flex">
-      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+    <p class="text-title product-title">Samsung Galaxy S21 Ultra - 128GB, Phantom Black</p>
       <div class="priceRow">
-        <span class="price title-h4">$998.00</span>
+        <span class="price title-h4">$400.00</span>
         <span class="title-h6 oldPrice">$1128.00</span>
       </div>
       <div class="ratingRow flex">
-        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="rating text-base flex"><img src="assets/icons/3-star-rating.svg" alt="">3</span>
         <span class="no-of-orders">· 154 orders</span>
         <span class="freeShipping">· Free Shipping</span>
       </div>
@@ -327,26 +370,28 @@ tempor incididunt ut labore et dolore magna aliqua</p>
       <p class="desc text-info">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua</p>
-      <a href="#" class="btn-text view-link">View details</a>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
       </div>
     </div>
-    <button class="favBtn">
-      <img src="assets/icons/blue_heart.svg" alt="">
+    <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
     </button>
   </div>
 
           <!-- Product Card#4 -->
 
-  <div class="productCard flex">
-    <img src="assets/images/tech/7.jpg" alt="Product Image">
+  <div class="product-card productCard flex" data-category="computer and tech" data-rating="2">
+    <img src="assets/images/tech/4.jpg" alt="Product Image">
     <div class="productInfo flex">
-      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+    <p class="text-title product-title">Oppo F19 Pro - 8GB RAM, 128GB, Crystal Silver</p>
       <div class="priceRow">
-        <span class="price title-h4">$998.00</span>
+        <span class="price title-h4">$650.00</span>
         <span class="title-h6 oldPrice">$1128.00</span>
       </div>
       <div class="ratingRow flex">
-        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="rating text-base flex"><img src="assets/icons/2-star-rating.svg" alt="">2</span>
         <span class="no-of-orders">· 154 orders</span>
         <span class="freeShipping">· Free Shipping</span>
       </div>
@@ -354,26 +399,28 @@ tempor incididunt ut labore et dolore magna aliqua</p>
       <p class="desc text-info">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua</p>
-      <a href="#" class="btn-text view-link">View details</a>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
       </div>
     </div>
-    <button class="favBtn">
-      <img src="assets/icons/blue_heart.svg" alt="">
+     <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
     </button>
   </div>
 
           <!-- Product Card#5 -->
 
-  <div class="productCard flex">
-    <img src="assets/images/tech/8.jpg" alt="Product Image">
+  <div class="product-card productCard flex" data-category="computer and tech" data-rating="5">
+    <img src="assets/images/tech/5.jpg" alt="Product Image">
     <div class="productInfo flex">
-      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+    <p class="text-title product-title">Vivo V21 - 44MP OIS Selfie, 128GB, Sunset Dazzle</p>
       <div class="priceRow">
-        <span class="price title-h4">$998.00</span>
+        <span class="price title-h4">$950.00</span>
         <span class="title-h6 oldPrice">$1128.00</span>
       </div>
       <div class="ratingRow flex">
-        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="rating text-base flex"><img src="assets/icons/5-star-rating.svg" alt="">5</span>
         <span class="no-of-orders">· 154 orders</span>
         <span class="freeShipping">· Free Shipping</span>
       </div>
@@ -381,26 +428,28 @@ tempor incididunt ut labore et dolore magna aliqua</p>
       <p class="desc text-info">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua</p>
-      <a href="#" class="btn-text view-link">View details</a>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
       </div>
     </div>
-    <button class="favBtn">
-      <img src="assets/icons/blue_heart.svg" alt="">
+      <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
     </button>
   </div>
 
           <!-- Product Card#6 -->
 
-  <div class="productCard flex">
-    <img src="assets/images/tech/9.jpg" alt="Product Image">
+  <div class="product-card productCard flex" data-category="computer and tech" data-rating="4">
+    <img src="assets/images/tech/6.jpg" alt="Product Image">
     <div class="productInfo flex">
-      <p class="text-title">Canon Cmeara EOS 2000, Black 10x zoom</p>
+    <p class="text-title product-title">Realme 8 Pro - 108MP Camera, 128GB, Infinite Black</p>
       <div class="priceRow">
-        <span class="price title-h4">$998.00</span>
+        <span class="price title-h4">$800.00</span>
         <span class="title-h6 oldPrice">$1128.00</span>
       </div>
       <div class="ratingRow flex">
-        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
+        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">4</span>
         <span class="no-of-orders">· 154 orders</span>
         <span class="freeShipping">· Free Shipping</span>
       </div>
@@ -408,33 +457,352 @@ tempor incididunt ut labore et dolore magna aliqua</p>
       <p class="desc text-info">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua</p>
-      <a href="#" class="btn-text view-link">View details</a>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
       </div>
     </div>
-    <button class="favBtn">
-      <img src="assets/icons/blue_heart.svg" alt="">
+      <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
     </button>
   </div>
+
+  <!-- Product Card#7 -->
+
+  <div class="product-card productCard flex" data-category="computer and tech"  data-rating="3">
+    <img src="assets/images/tech/7.jpg" alt="Product Image">
+    <div class="productInfo flex">
+    <p class="text-title product-title">4K Ultra-Wide Curved Gaming Monitor</p>
+      <div class="priceRow">
+        <span class="price title-h4">$798.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/3-star-rating.svg" alt="">3</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+      <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+  </div>
+  
+  <!-- Product Card#8 -->
+
+  <div class="product-card productCard flex" data-category="computer and tech" data-rating="5">
+    <img src="assets/images/tech/8.jpg" alt="Product Image">
+    <div class="productInfo flex">
+    <p class="text-title product-title">Smart Fitness Band with Heart Rate Monitor</p>
+      <div class="priceRow">
+        <span class="price title-h4">$850.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/5-star-rating.svg" alt="">5</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+      <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+  </div>
+
+  <!-- Product Card#9 -->
+
+  <div class="product-card productCard flex" data-category="computer and tech" data-rating="4">
+    <img src="assets/images/tech/9.jpg" alt="Product Image">
+    <div class="productInfo flex">
+    <p class="text-title product-title">Professional Studio Microphone with Stand</p>
+      <div class="priceRow">
+        <span class="price title-h4">$499.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">4</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+     <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+  </div>
+
+  <!-- Product Card#10 -->
+
+  <div class="product-card productCard flex" data-category="computer and tech" data-rating="3">
+    <img src="assets/images/tech/10.jpg" alt="Product Image">
+    <div class="productInfo flex">
+    <p class="text-title product-title">Wireless Charging Dock Coffe Maker</p>
+      <div class="priceRow">
+        <span class="price title-h4">$599.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/3-star-rating.svg" alt="">3</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+      <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+  </div>
+
+
+  
+<!-- Clothes and wear Category Products -->
+        <!-- Product Card#1 -->
+   <!-- Product Card#1 -->
+<div class="product-card productCard flex" data-category="clothes and wear" data-rating="5">
+  <img src="assets/images/cloth/1.jpg" alt="Men's Casual Jacket">
+  <div class="productInfo flex">
+    <p class="text-title product-title">Men's Casual T-shirt</p>
+    <div class="priceRow">
+      <span class="price title-h4">$299.00</span>
+      <span class="title-h6 oldPrice">$1128.00</span>
+    </div>
+    <div class="ratingRow flex">
+      <span class="rating text-base flex"><img src="assets/icons/5-star-rating.svg" alt="">5</span>
+      <span class="no-of-orders">· 154 orders</span>
+      <span class="freeShipping">· Free Shipping</span>
+    </div>
+    <div class="productDescription">
+      <p class="desc text-info">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua
+      </p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+    </div>
+  </div>
+  <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+</div>
+
+<!-- Product Card#2 -->
+<div class="product-card productCard flex" data-category="clothes and wear" data-rating="4">
+  <img src="assets/images/cloth/2.jpg" alt="Women's Summer Dress">
+  <div class="productInfo flex">
+    <p class="text-title product-title">Women's Summer Dress</p>
+    <div class="priceRow">
+      <span class="price title-h4">$400.00</span>
+      <span class="title-h6 oldPrice">$1128.00</span>
+    </div>
+    <div class="ratingRow flex">
+      <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">4</span>
+      <span class="no-of-orders">· 154 orders</span>
+      <span class="freeShipping">· Free Shipping</span>
+    </div>
+    <div class="productDescription">
+      <p class="desc text-info">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua
+      </p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+    </div>
+  </div>
+  <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+</div>
+
+<!-- Product Card#3 -->
+<div class="product-card productCard flex" data-category="clothes and wear" data-rating="3">
+  <img src="assets/images/cloth/3.jpg" alt="Men's Formal Shirt">
+  <div class="productInfo flex">
+    <p class="text-title product-title">Men's Formal Shirt</p>
+    <div class="priceRow">
+      <span class="price title-h4">$550.00</span>
+      <span class="title-h6 oldPrice">$1128.00</span>
+    </div>
+    <div class="ratingRow flex">
+      <span class="rating text-base flex"><img src="assets/icons/3-star-rating.svg" alt="">3</span>
+      <span class="no-of-orders">· 154 orders</span>
+      <span class="freeShipping">· Free Shipping</span>
+    </div>
+    <div class="productDescription">
+      <p class="desc text-info">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua
+      </p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+    </div>
+  </div>
+  <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+</div>
+
+<!-- Product Card#4 -->
+<div class="product-card productCard flex" data-category="clothes and wear" data-rating="2">
+  <img src="assets/images/cloth/4.jpg" alt="Women's Casual Top">
+  <div class="productInfo flex">
+    <p class="text-title product-title">Women's Casual Top</p>
+    <div class="priceRow">
+      <span class="price title-h4">$699.00</span>
+      <span class="title-h6 oldPrice">$1128.00</span>
+    </div>
+    <div class="ratingRow flex">
+      <span class="rating text-base flex"><img src="assets/icons/2-star-rating.svg" alt="">2</span>
+      <span class="no-of-orders">· 154 orders</span>
+      <span class="freeShipping">· Free Shipping</span>
+    </div>
+    <div class="productDescription">
+      <p class="desc text-info">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua
+      </p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+    </div>
+  </div>
+  <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+</div>
+
+<!-- Product Card#5 -->
+<div class="product-card productCard flex" data-category="clothes and wear" data-rating="5">
+  <img src="assets/images/cloth/5.jpg" alt="Women's Jeans Bag">
+  <div class="productInfo flex">
+    <p class="text-title product-title">Men's Denim Jeans</p>
+    <div class="priceRow">
+      <span class="price title-h4">$899.00</span>
+      <span class="title-h6 oldPrice">$1128.00</span>
+    </div>
+    <div class="ratingRow flex">
+      <span class="rating text-base flex"><img src="assets/icons/5-star-rating.svg" alt="">5</span>
+      <span class="no-of-orders">· 154 orders</span>
+      <span class="freeShipping">· Free Shipping</span>
+    </div>
+    <div class="productDescription">
+      <p class="desc text-info">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua
+      </p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+    </div>
+  </div>
+ <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+</div>
+
+<!-- Product Card#6 -->
+<div class="product-card productCard flex" data-category="clothes and wear" data-rating="4">
+  <img src="assets/images/cloth/6.jpg" alt="Women's Stylish Skirt">
+  <div class="productInfo flex">
+    <p class="text-title product-title">Professional looking Stylish Wallet</p>
+    <div class="priceRow">
+      <span class="price title-h4">$299.00</span>
+      <span class="title-h6 oldPrice">$1128.00</span>
+    </div>
+    <div class="ratingRow flex">
+      <span class="rating text-base flex"><img src="assets/icons/4-star-rating.svg" alt="">4</span>
+      <span class="no-of-orders">· 154 orders</span>
+      <span class="freeShipping">· Free Shipping</span>
+    </div>
+    <div class="productDescription">
+      <p class="desc text-info">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua
+      </p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+    </div>
+  </div>
+<button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+</div>
+
+
+  <!-- Product Card#7 -->
+
+   <div class="product-card productCard flex" data-category="clothes and wear" data-rating="3">
+    <img src="assets/images/cloth/7.jpg" alt="Product Image">
+    <div class="productInfo flex">
+      <p class="text-title product-title">Formal Winter Coat</p>
+      <div class="priceRow">
+        <span class="price title-h4">$999.00</span>
+        <span class="title-h6 oldPrice">$1128.00</span>
+      </div>
+      <div class="ratingRow flex">
+        <span class="rating text-base flex"><img src="assets/icons/3-star-rating.svg" alt="">3</span>
+        <span class="no-of-orders">· 154 orders</span>
+        <span class="freeShipping">· Free Shipping</span>
+      </div>
+      <div class="productDescription">
+      <p class="desc text-info">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua</p>
+      <a href="product-detail.html" class="btn-text view-link">View details</a>
+      </div>
+    </div>
+    <button id="cartBtn" class="favBtn">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 0.825012C12.76 0.825012 11.09 1.63501 10 2.91501C8.91 1.63501 7.24 0.825012 5.5 0.825012C2.42 0.825012 0 3.24501 0 6.32501C0 10.105 3.4 13.185 8.55 17.865L10 19.175L11.45 17.855C16.6 13.185 20 10.105 20 6.32501C20 3.24501 17.58 0.825012 14.5 0.825012ZM10.1 16.375L10 16.475L9.9 16.375C5.14 12.065 2 9.21501 2 6.32501C2 4.32501 3.5 2.82501 5.5 2.82501C7.04 2.82501 8.54 3.81501 9.07 5.18501H10.94C11.46 3.81501 12.96 2.82501 14.5 2.82501C16.5 2.82501 18 4.32501 18 6.32501C18 9.21501 14.86 12.065 10.1 16.375Z" fill="#0D6EFD"/>
+</svg>
+    </button>
+  </div>
+
 </section>
+
   </div>
     </div>
 
    <!-- Pagination Section-->
-<div class="paginationSection flex">
-  <div class="paginationInfo">
-    <select class="input-basic">
-      <option>Show 10</option>
-      <option>Show 20</option>
-      <option>Show 30</option>
-    </select>
-  </div>
-  <div class="paginationControls flex">
-    <button class="pageBtn btn-text arrowBtn active">&lt;</button>
+<div class="paginationSection flex" id="pagination">
+    <button class="pageBtn btn-text" style="width: 100px;">Previous</button>
     <button class="pageBtn btn-text active">1</button>
-    <button class="pageBtn btn-text">2</button>
-    <button class="pageBtn btn-text">3</button>
-    <button class="pageBtn btn-text arrowBtn">&gt;</button>
-  </div>
+    <!-- <button class="pageBtn btn-text">2</button>
+    <button class="pageBtn btn-text">3</button> -->
+    <button class="pageBtn btn-text" style="width: 100px;">Next</button>
 </div>
 
   </main>
@@ -462,9 +830,8 @@ tempor incididunt ut labore et dolore magna aliqua</p>
 
     </section>
 
-   
     <!-- Footer -->
-    <footer>
+   <footer>
         <section class="container mainFooter flex">
           <div class="brandLogoCol flex columns">
             <img src="assets/images/logo-colored.png" alt="" />
@@ -517,18 +884,36 @@ tempor incididunt ut labore et dolore magna aliqua</p>
       
                 <section class="subFooterSection">
         <div class="container subFooter flex">
-          <p class="text-sm text-center sm:text-left">© 2023 Ecommerce.</p>
-          <div class="rightDiv flex">
-            <img src="assets/images/flag-image.png" alt="" />
-            <span>English</span>
-            <a href="#">
-              <img src="assets/icons/expand_less.png" alt="" />
-            </a>
-          </div>
+          <p>© 2023 Ecommerce.</p>
+      
+  <!--Custom Footer Language Dropdown -->
+  <div class="dropdown languageDropdown">
+    <button type="button" id="language-btn" class="flex text-base">
+      <span>English</span>
+     <img id="language-flag" src="assets/images/flags/us.png" alt="Flag"  height="18px">
+      <img src="assets/icons/expand_less.png" alt="▼">
+    </button>
+    <ul id="language-menu">
+            <li class="flex" data-language="English" data-flag="assets/images/flags/us.png">
+              English<img src="assets/images/flags/us.png" alt="">
+            </li>
+            
+            <li class="flex" data-language="French" data-flag="assets/images/flags/france.png">
+              French<img src="assets/images/flags/france.png" alt="">
+            </li>
+            
+            <li class="flex" data-language="German" data-flag="assets/images/flags/germany.png">
+              German<img src="assets/images/flags/germany.png" alt="">
+            </li>
+            
+        </ul>
+    </div>
         
         </div>
                 </section>
     </footer>
+    
+<script src="js/app.js"></script>
 <script src="js/product-list.js"></script>
   </body>
 </html>

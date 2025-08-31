@@ -1,0 +1,345 @@
+/* Main Section Styling */
+
+.content-main {
+      background: white;
+    height: 550px;
+  gap: 2rem;
+  align-items: flex-start;
+  padding-block: 1rem;
+}
+
+.gallery {
+  width: 25%;
+}
+
+.gallery .mainImage {
+  width: 100%;
+  border: var(--section-border);
+  border-radius: var(--section-border-radius);
+  margin-bottom: 1rem;
+}
+
+.thumbnailRow {
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.thumbnailRow img {
+  width: 40px;
+  height: 40px;
+  border: var(--section-border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.info {
+  width: 45%;
+  /* flex: 1; */
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.productStatus {
+  color: #00B517;
+}
+.ratingRow {
+  gap: 1rem;
+  color: var(--secondary-font-color);
+}
+.ratingRow .rating{
+  color:var(--base-color-orange) ;
+}
+.ratingRow .rating,.reviews,.soldItems{
+    gap: 10px;
+}
+
+
+.infoTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infoTable thead{
+background: #FFF0DF;
+  border-radius: var(--section-border-radius);
+      width: 100%;
+
+
+}
+
+.infoTable thead th{
+    padding: 15px;
+    padding-block: 1rem;
+      width: 30%;
+    
+}
+
+.infoTable thead th:nth-child(2){
+      border-inline: var(--section-border);
+
+}
+thead th p.text-small{
+  margin-top: 10px;
+}
+thead .highlightPrice {
+color: #FA3434;
+  }
+
+
+.infoTable tbody td {
+  padding: 0.6rem 0.5rem;
+}
+.infoTable tbody td:nth-child(1){
+    color: var(--secondary-font-color);
+
+}
+
+.sellerInfo {
+  width: 25%;
+      flex-direction: column;
+    padding: 0.5rem;
+  gap: 1rem;
+}
+
+.sellerInfo .sellerCard { 
+  width: 100%;
+      flex-direction: column;
+    align-items: flex-start;
+  border: var(--section-border);
+  border-radius: var(--section-border-radius);
+  gap: 1rem;
+      padding: 0.7rem;
+
+}
+.sellerCard .supplierName{
+  width: 100%;
+  gap: 0.8rem;
+}
+.sellerCard .supplierName img{
+width: 48px;
+height: 48px;
+}
+.sellerCard .supplierName p{
+  color: var(--base-color-dark);
+}
+.sellerCard .supplyIcons{
+  gap: 0.8rem;
+}
+.sellerCard .supplyIcons img{
+width: 20px;
+height: 20px;
+}
+.sellerCard button{
+  width: 100%;
+}
+.sellerInfo .cart-btn{
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+.cart-btn svg path {
+  fill: currentColor; 
+  transition: fill 0.3s ease;
+}
+
+.cart-btn:hover svg path {
+  fill: white;
+
+}
+
+/* Block Detail Section */
+.blockDetailSection {
+  gap: 1rem;
+  align-items: flex-start;
+  margin-block: 1rem;
+  padding: 0;
+  border: none;
+}
+
+.blockDetailSection .blockDetail {
+  background: white;
+  flex: 1;
+  border: var(--section-border);
+  border-radius: var(--section-border-radius);
+  padding-block: 1rem;
+  padding-inline: var(--padding-inline-section);
+}
+
+/* Tab Header */
+.tabHeader {
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: var(--section-border);
+}
+
+.tabHeader .tabBtn {
+  color: var(--secondary-font-color);
+  border: none;
+  border-radius: 0;
+}
+
+.tabHeader .tabBtn.active,
+.tabBtn:hover {
+  
+  border-bottom: 2px solid var(--color-primary);
+    color: var(--color-primary);
+background: none;
+}
+
+/* Tab Content */
+.tabContent {
+  padding-block: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.detailTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.detailTable td {
+  border: var(--section-border);
+  padding: 0.6rem;
+}
+
+.detailTable td:first-child {
+  background: var(--dark-color-background);
+  color: var(--base-color-light);
+  width: 30%;
+}
+
+/* Features List */
+.featureList {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.featureList li {
+    color: var(--base-color-light);
+    gap: 1rem;
+}
+
+/* Sidebar */
+.blockDetailSection aside {
+  background: white;
+  width: 25%;
+  border: var(--section-border);
+  border-radius: var(--section-border-radius);
+  padding: 1rem;
+}
+
+.aside-products {
+  margin-block: 1rem;
+  flex-direction: column;
+    align-items: flex-start;
+  gap: 1rem;
+}
+
+.aside-product-card {
+  align-items: flex-start;
+  gap: 10px;
+  width: 90%;
+  height: 80px;
+}
+
+.aside-product-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--section-border-radius);
+  border: var(--section-border);
+}
+.aside-product-card .product-details {
+  flex-direction:column;
+  align-items: flex-start;
+}
+
+.aside-product-card .product-details .name {
+  color: var(--base-color-dark);
+}
+
+/* Related Products Styling */
+
+#RelatedProductSection{
+    margin-block: 1rem;
+}
+.RelatedProductContainer{
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding-block: 1rem;
+  background: white;
+}
+.RelatedProductContainer .relatedCardsContainer{
+  gap: 1rem;
+  flex-wrap: wrap;   
+  width: 100%;
+  justify-content: space-between;
+
+}
+.relatedCardsContainer .relatedProductCard{
+  flex-direction: column;
+  gap: 10px;
+  width: 190px;
+  padding-block: 1rem;
+  /* flex: 1; */
+  overflow: hidden;
+  background: none;
+  transition: all 0.3s ease;
+
+}
+
+.relatedProductCard:hover{
+    transform: scale(1.01);
+    box-shadow: 0 5px 24px rgba(0, 0, 0, 0.15);
+}
+
+.relatedProductCard img{
+     width: 80%;
+     border: var(--section-border);
+     border-radius: var(--section-border-radius);
+height: 132px;
+  object-fit: contain;
+
+}
+.relatedProductCard .productDetails{
+    width: 90%;
+  flex-direction: column;
+  gap: 15px;
+      text-align: center;
+  overflow: hidden;
+ }
+.productDetails .name{
+    color: var(--base-color-light);
+}
+.productDetails .price{
+    color: var(--secondary-font-color);
+}
+
+/* Banner Section Styling */
+ 
+  .bannerContainer {
+  height: 120px;
+  color: white;
+  background: 
+    linear-gradient(94.99deg, #237CFF 7.19%,#005ADE
+ 89.49%);
+background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+}
+
+.bannerContainer .bannerInfo{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.shopBtn{
+    background: var(--base-color-orange);
+    color: white;
+}

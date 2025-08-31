@@ -1,11 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/section-style.css" />
+    <link rel="stylesheet" href="css/product-listview.css" />
+    <link rel="stylesheet" href="css/product-detail.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  </head>
+  <body>
+     <!-- Header -->
+    <header>
+      <div class="container headerSection flex">
+        <div class="brandLogo">
+          <a href="index.html"><img src="assets/images/logo-colored.png" alt="" /></a>
+        </div>
+          <ul class="userActions flex">
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/profile.png" alt="" />
+                <span class="text-small"
+                  >Profile</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/message.png" alt="" /><span class="text-small"
+                  >Message</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#" class="flex"
+                ><img src="assets/icons/orders.png" alt="" /><span class="text-small"
+                  >Orders</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="cart.html" class="flex"
+                ><img src="assets/icons/cart.png" alt="" /><span class="text-small"
+                  >My cart</span
+                ></a
+              >
+            </li>
+          </ul>
+      </div>
+    </header>
+
+    <!-- Main Cart Section -->
+<section class="container mainCartSection">
+    <p id="cartTitle" class="title-h4">
+      My Cart&nbsp;(<span id="cartCount">0</span>)
+    </p>
+
+<div class="mainCartContainer flex">
+  <!-- Left Content: Main Cart Products -->
+  <div class="main-cart">
+<div class="cart-items-container">
+
+    <div class="cart-item flex">
+        <div class="cart-item-image">
+            <img src="assets/images/cloth/1.jpg" alt="T-shirt with multiple colors">
+        </div>
+        <div class="cart-item-details flex">
+            <p class="text-title">T-shirts with multiple colors, for men and lady</>
+            <p class="text-info">
+                Size: medium, Color: blue, Material: Plastic <br>
+                Seller: Artel Market
+            </p>
+            <div class="item-actions flex">
+     <button class="btn-text btn-basic btn-remove">Remove</button>
+     <button class="btn-text btn-basic btn-save">Save for later</button>
+            </div>
+        </div>
+         <div class="cart-item-qty flex">
+          <p class="text-title">$78.99</p>
+          <input type="number" name="item-qty" id="item-qty" class="input-basic" placeholder="Qty">
+                </div>
+    </div>
+
+    <div class="cart-item flex">
+        <div class="cart-item-image">
+            <img src="assets/images/cloth/1.jpg" alt="T-shirt with multiple colors">
+        </div>
+        <div class="cart-item-details flex">
+            <p class="text-title">T-shirts with multiple colors, for men and lady</>
+            <p class="text-info">
+                Size: medium, Color: blue, Material: Plastic <br>
+                Seller: Artel Market
+            </p>
+            <div class="item-actions flex">
+     <button class="btn-text btn-basic btn-remove">Remove</button>
+     <button class="btn-text btn-basic btn-save">Save for later</button>
+            </div>
+        </div>
+         <div class="cart-item-qty flex">
+          <p class="text-title">$78.99</p>
+          <input type="number" name="item-qty" id="item-qty" class="input-basic" placeholder="Qty">
+                </div>
+    </div>
+
+    <div class="cart-item flex">
+        <div class="cart-item-image">
+            <img src="assets/images/cloth/1.jpg" alt="T-shirt with multiple colors">
+        </div>
+        <div class="cart-item-details flex">
+            <p class="text-title">T-shirts with multiple colors, for men and lady</>
+            <p class="text-info">
+                Size: medium, Color: blue, Material: Plastic <br>
+                Seller: Artel Market
+            </p>
+            <div class="item-actions flex">
+     <button class="btn-text btn-basic btn-remove">Remove</button>
+     <button class="btn-text btn-basic btn-save">Save for later</button>
+            </div>
+        </div>
+         <div class="cart-item-qty flex">
+          <p class="text-title">$78.99</p>
+          <input type="number" name="item-qty" id="item-qty" class="input-basic" placeholder="Qty">
+                </div>
+    </div>
+</div>
+    <div class="cart-footer flex">
+     <button onclick="window.location.href='product-listview.html'" class="btn-text btn-primary btn-back">← Back to shop</button>
+     <button class="btn-text btn-basic btn-removeAll">Remove All</button>
+
+    </div>
     
-</body>
+  </div>
+
+      <!--Right Content Aside Section -->
+  <aside class="cart-summary flex">
+    
+
+    <!-- Coupon Section -->
+    <div class="coupon-section flex">
+        <p class="text-base">Have a Coupon?</p>
+        <div class="coupon-input flex">
+            <input type="text" class="input-basic" placeholder="Add a coupen">
+            <button class="btn-basic btn-text">Apply</button>
+        </div>
+    </div>
+
+    <!-- Checkout Summary -->
+    <div class="checkout-section flex">
+        <div class="checkout-item flex">
+            <span>Subtotal:</span>
+            <span id="item-subtotal">$1403.97</span>
+        </div>
+        <div class="checkout-item flex">
+            <span>Discount:</span>
+            <span id="item-discount">-16.00</span>
+        </div>
+        <div class="checkout-item flex">
+            <span>Tax:</span>
+            <span id="item-tax">+14.00</span>
+        </div>
+        <div class="checkout-item total flex">
+            <span class="title-h6">Total</span>
+            <span id="total-amount" class="title-h4">$1357.97</span>
+        </div>
+        <button class="checkout-btn btn-text btn-primary">Checkout</button>
+        <div class="checkout-item flex cart-payments">
+          <div class="payment-img flex">
+          <img src="assets/images/payment-logo/logo1.png" alt="">
+          </div>
+          <div class="payment-img flex">
+          <img src="assets/images/payment-logo/logo2.png" alt="">
+          </div>
+          <div class="payment-img flex">
+          <img src="assets/images/payment-logo/logo3.png" alt="">
+          </div>
+          <div class="payment-img flex">
+          <img src="assets/images/payment-logo/logo4.png" alt="">
+          </div>
+          <div class="payment-img flex">
+          <img src="assets/images/payment-logo/logo5.png" alt="">
+          </div>
+        </div>
+    </div>
+   </aside>
+
+</div>
+
+
+   </div>
+</section>
+
+   <!-- Features Section -->
+    <section id="cartFeatureSection">
+        <div class="cartFeatureContainer flex container">
+            
+            <!-- Feature Card#1 -->
+            <div class="cartFeatureCard flex">
+                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="24" fill="#DEE2E7"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30 20H29V18C29 15.24 26.76 13 24 13C21.24 13 19 15.24 19 18V20H18C16.9 20 16 20.9 16 22V32C16 33.1 16.9 34 18 34H30C31.1 34 32 33.1 32 32V22C32 20.9 31.1 20 30 20ZM24 29C22.9 29 22 28.1 22 27C22 25.9 22.9 25 24 25C25.1 25 26 25.9 26 27C26 28.1 25.1 29 24 29ZM21 20V18C21 16.34 22.34 15 24 15C25.66 15 27 16.34 27 18V20H21Z" fill="#8B96A5"/>
+</svg>
+
+                <div class="featureCardText flex">
+                    <p class="text-info">Secure payment</p>
+                    <p class="text-info">Have you ever finally just </p>
+                </div>
+            </div>
+
+            <!-- Feature Card#2 -->
+            <div class="cartFeatureCard flex">
+                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="24" fill="#DEE2E7"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M32 15H16C14.9 15 14.01 15.9 14.01 17L14 35L18 31H32C33.1 31 34 30.1 34 29V17C34 15.9 33.1 15 32 15ZM19 22H29C29.55 22 30 22.45 30 23C30 23.55 29.55 24 29 24H19C18.45 24 18 23.55 18 23C18 22.45 18.45 22 19 22ZM25 27H19C18.45 27 18 26.55 18 26C18 25.45 18.45 25 19 25H25C25.55 25 26 25.45 26 26C26 26.55 25.55 27 25 27ZM29 21H19C18.45 21 18 20.55 18 20C18 19.45 18.45 19 19 19H29C29.55 19 30 19.45 30 20C30 20.55 29.55 21 29 21Z" fill="#8B96A5"/>
+</svg>
+
+                <div class="featureCardText flex">
+                    <p class="text-info">Customer Support</p>
+                    <p class="text-info">Have you ever finally just </p>
+                </div>
+            </div>
+
+            <!-- Feature Card#3 -->
+            <div class="cartFeatureCard flex">
+                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="24" fill="#DEE2E7"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M31.5 20H29V18C29 16.9 28.1 16 27 16H15C13.9 16 13 16.9 13 18V27C13 28.1 13.9 29 15 29C15 30.66 16.34 32 18 32C19.66 32 21 30.66 21 29H27C27 30.66 28.34 32 30 32C31.66 32 33 30.66 33 29H34C34.55 29 35 28.55 35 28V24.67C35 24.24 34.86 23.82 34.6 23.47L32.3 20.4C32.11 20.15 31.81 20 31.5 20ZM18 30C17.45 30 17 29.55 17 29C17 28.45 17.45 28 18 28C18.55 28 19 28.45 19 29C19 29.55 18.55 30 18 30ZM31.5 21.5L33.46 24H29V21.5H31.5ZM30 30C29.45 30 29 29.55 29 29C29 28.45 29.45 28 30 28C30.55 28 31 28.45 31 29C31 29.55 30.55 30 30 30Z" fill="#8B96A5"/>
+</svg>
+
+                <div class="featureCardText flex">
+                    <p class="text-info">Free Delivery</p>
+                    <p class="text-info">Have you ever finally just </p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>    
+
+ <!-- Related Products Section -->
+    <section id="savedProductSection">
+      <div class="savedProductContainer container flex">
+        <p class="title-h4">Saved for later</p>
+        <div class="savedCardsContainer flex">
+
+          <!-- Product Card#1 -->
+          <div class="product-card saveProductCard flex">
+            <img src="assets/images/tech/1.jpg" alt="">
+
+            <div class="saveProductDetails flex">
+                <p class="title-h5 price">$99.50</p>
+              <p class="product-title text-info name">GoPro HERO6 4K Action Camera - Black</p>
+
+              <button id="cartBtn" class="cart-btn btn-text btn-basic flex">
+      <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.1675 11.9167C15.855 11.9167 16.46 11.5408 16.7716 10.9725L20.0533 5.02334C20.3925 4.41834 19.9525 3.66668 19.2558 3.66668H5.68912L4.82746 1.83334H1.82996V3.66668H3.66329L6.96329 10.6242L5.72579 12.8608C5.05662 14.0892 5.93662 15.5833 7.32996 15.5833H18.33V13.75H7.32996L8.33829 11.9167H15.1675ZM6.55996 5.50001H17.6975L15.1675 10.0833H8.73246L6.55996 5.50001ZM7.32996 16.5C6.32162 16.5 5.50579 17.325 5.50579 18.3333C5.50579 19.3417 6.32162 20.1667 7.32996 20.1667C8.33829 20.1667 9.16329 19.3417 9.16329 18.3333C9.16329 17.325 8.33829 16.5 7.32996 16.5ZM16.4966 16.5C15.4883 16.5 14.6725 17.325 14.6725 18.3333C14.6725 19.3417 15.4883 20.1667 16.4966 20.1667C17.505 20.1667 18.33 19.3417 18.33 18.3333C18.33 17.325 17.505 16.5 16.4966 16.5Z" fill="#0D6EFD"/>
+</svg>
+    Move to cart
+    </button>
+
+            </div>
+            
+          </div>
+
+           <!-- Product Card#2 -->
+          <div class="product-card saveProductCard flex">
+            <img src="assets/images/tech/2.jpg" alt="">
+
+            <div class="saveProductDetails flex">
+                <p class="title-h5 price">$99.50</p>
+              <p class="product-title text-info name">GoPro HERO6 4K Action Camera - Black</p>
+             <button id="cartBtn" class="cart-btn btn-text btn-basic flex">
+      <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.1675 11.9167C15.855 11.9167 16.46 11.5408 16.7716 10.9725L20.0533 5.02334C20.3925 4.41834 19.9525 3.66668 19.2558 3.66668H5.68912L4.82746 1.83334H1.82996V3.66668H3.66329L6.96329 10.6242L5.72579 12.8608C5.05662 14.0892 5.93662 15.5833 7.32996 15.5833H18.33V13.75H7.32996L8.33829 11.9167H15.1675ZM6.55996 5.50001H17.6975L15.1675 10.0833H8.73246L6.55996 5.50001ZM7.32996 16.5C6.32162 16.5 5.50579 17.325 5.50579 18.3333C5.50579 19.3417 6.32162 20.1667 7.32996 20.1667C8.33829 20.1667 9.16329 19.3417 9.16329 18.3333C9.16329 17.325 8.33829 16.5 7.32996 16.5ZM16.4966 16.5C15.4883 16.5 14.6725 17.325 14.6725 18.3333C14.6725 19.3417 15.4883 20.1667 16.4966 20.1667C17.505 20.1667 18.33 19.3417 18.33 18.3333C18.33 17.325 17.505 16.5 16.4966 16.5Z" fill="#0D6EFD"/>
+</svg>
+    Move to cart
+    </button>
+
+            </div>
+            
+          </div>
+
+           <!-- Product Card#3 -->
+          <div class="product-card saveProductCard flex">
+            <img src="assets/images/tech/3.jpg" alt="">
+
+            <div class="saveProductDetails flex">
+                <p class="title-h5 price">$99.50</p>
+              <p class="product-title text-info name">GoPro HERO6 4K Action Camera - Black</p>
+               <button id="cartBtn" class="cart-btn btn-text btn-basic flex">
+      <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.1675 11.9167C15.855 11.9167 16.46 11.5408 16.7716 10.9725L20.0533 5.02334C20.3925 4.41834 19.9525 3.66668 19.2558 3.66668H5.68912L4.82746 1.83334H1.82996V3.66668H3.66329L6.96329 10.6242L5.72579 12.8608C5.05662 14.0892 5.93662 15.5833 7.32996 15.5833H18.33V13.75H7.32996L8.33829 11.9167H15.1675ZM6.55996 5.50001H17.6975L15.1675 10.0833H8.73246L6.55996 5.50001ZM7.32996 16.5C6.32162 16.5 5.50579 17.325 5.50579 18.3333C5.50579 19.3417 6.32162 20.1667 7.32996 20.1667C8.33829 20.1667 9.16329 19.3417 9.16329 18.3333C9.16329 17.325 8.33829 16.5 7.32996 16.5ZM16.4966 16.5C15.4883 16.5 14.6725 17.325 14.6725 18.3333C14.6725 19.3417 15.4883 20.1667 16.4966 20.1667C17.505 20.1667 18.33 19.3417 18.33 18.3333C18.33 17.325 17.505 16.5 16.4966 16.5Z" fill="#0D6EFD"/>
+</svg>
+    Move to cart
+    </button>
+
+            </div>
+            
+          </div>
+
+           <!-- Product Card#4 -->
+          <div class="product-card saveProductCard flex">
+            <img src="assets/images/tech/4.jpg" alt="">
+
+            <div class="saveProductDetails flex">
+                <p class="title-h5 price">$99.50</p>
+              <p class="product-title text-info name">GoPro HERO6 4K Action Camera - Black</p>
+               <button id="cartBtn" class="cart-btn btn-text btn-basic flex">
+      <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.1675 11.9167C15.855 11.9167 16.46 11.5408 16.7716 10.9725L20.0533 5.02334C20.3925 4.41834 19.9525 3.66668 19.2558 3.66668H5.68912L4.82746 1.83334H1.82996V3.66668H3.66329L6.96329 10.6242L5.72579 12.8608C5.05662 14.0892 5.93662 15.5833 7.32996 15.5833H18.33V13.75H7.32996L8.33829 11.9167H15.1675ZM6.55996 5.50001H17.6975L15.1675 10.0833H8.73246L6.55996 5.50001ZM7.32996 16.5C6.32162 16.5 5.50579 17.325 5.50579 18.3333C5.50579 19.3417 6.32162 20.1667 7.32996 20.1667C8.33829 20.1667 9.16329 19.3417 9.16329 18.3333C9.16329 17.325 8.33829 16.5 7.32996 16.5ZM16.4966 16.5C15.4883 16.5 14.6725 17.325 14.6725 18.3333C14.6725 19.3417 15.4883 20.1667 16.4966 20.1667C17.505 20.1667 18.33 19.3417 18.33 18.3333C18.33 17.325 17.505 16.5 16.4966 16.5Z" fill="#0D6EFD"/>
+</svg>
+    Move to cart
+    </button>
+
+            </div>
+            
+          </div>
+
+
+        </div>
+        
+      </div>
+    </section>
+
+ <!-- Discount Banner Section -->
+      <section id="discountBanner">
+      <div class="container bannerContainer flex">
+        <div class="bannerInfo flex">
+          <p class="title-h3">
+Super discount on more than 100 USD
+          </p>
+          <p class="text-base desc">
+Have you ever finally just write dummy info
+          </p>
+        </div>
+                  <button onclick="window.location.href='product-listview.html'" class="btn-text shopBtn">Shop now</button>
+      </div>
+    </section>
+
+   
+    <!-- Footer -->
+    <footer>
+        <section class="container mainFooter flex">
+          <div class="brandLogoCol flex columns">
+            <img src="assets/images/logo-colored.png" alt="" />
+            <p class="text-info">
+              Best information about the company gies here but now lorem ipsum
+              is
+            </p>
+            <div class="socialIcons flex">
+              <img src="assets/icons/facebook3.png" alt="" />
+              <img src="assets/icons/twitter3.png" alt="" />
+              <img src="assets/icons/linkedin3.png" alt="" />
+              <img src="assets/icons/instagram3.png" alt="" />
+              <img src="assets/icons/youtube3.png" alt="" />
+            </div>
+          </div>
+          <div class="aboutCol flex columns">
+            <p class="text-title">About</p>
+            <a href="#" class="text-info">About Us</a>
+            <a href="#" class="text-info">Find store</a>
+            <a href="#" class="text-info">Categories</a>
+            <a href="#" class="text-info">Blogs</a>
+          </div>
+          <div class="prtnershipCol flex columns">
+            <p class="text-title">Partnership</p>
+            <a href="#" class="text-info">About Us</a>
+            <a href="#" class="text-info">Find store</a>
+            <a href="#" class="text-info">Categories</a>
+            <a href="#" class="text-info">Blogs</a>
+          </div>
+          <div class="infoCol flex columns">
+            <p class="text-title">Information</p>
+            <a href="#" class="text-info">Help Center</a>
+            <a href="#" class="text-info">Money Refund</a>
+            <a href="#" class="text-info">Shipping</a>
+            <a href="#" class="text-info">Contact Us</a>
+          </div>
+          <div class="forUsersCol flex columns">
+            <p class="text-title">For Users</p>
+            <a href="#" class="text-info">Login</a>
+            <a href="#" class="text-info">Register</a>
+            <a href="#" class="text-info">Settings</a>
+            <a href="#" class="text-info">My Orders</a>
+          </div>
+          <div class="getAppCol flex columns">
+            <p class="text-title">Get app</p>
+            <img src="assets/images/market-button.png" alt="" />
+            <img src="assets/images/google-play.png" alt="" />
+          </div>
+        </section>
+      
+                <section class="subFooterSection">
+        <div class="container subFooter flex">
+          <p class="text-sm text-center sm:text-left">© 2023 Ecommerce.</p>
+          <div class="rightDiv flex">
+            <img src="assets/images/flag-image.png" alt="" />
+            <span>English</span>
+            <a href="#">
+              <img src="assets/icons/expand_less.png" alt="" />
+            </a>
+          </div>
+        
+        </div>
+                </section>
+    </footer>
+    <script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+  </body>
 </html>

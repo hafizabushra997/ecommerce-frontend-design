@@ -26,12 +26,10 @@ ul.breadcrumb li + li:before {
 .sidebar {
     border-top: var(--section-border);
   width: 20%;
-  padding-block: 1rem;
   }
 
 .sidebar-section {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-block: 15px;
   border-bottom: var(--section-border);
 
 }
@@ -39,6 +37,8 @@ ul.breadcrumb li + li:before {
 .sidebar-header {
   justify-content: space-between;
   cursor: pointer;
+    margin-bottom: 15px;
+
 }
 
 
@@ -72,6 +72,17 @@ ul.breadcrumb li + li:before {
 .sidebar-content li a:hover{
   text-decoration: underline;
 }
+.category-list  li{
+  margin-block: 2px;
+}
+.sidebar-content .filter-link{
+    padding: 10px 5px;
+    color: var(--base-color-light);
+}
+.sidebar-content .filter-link:hover{
+    text-decoration: none;
+}
+
 .sidebar-content li label{
   color: var(--base-color-dark);
   display: flex;
@@ -101,14 +112,11 @@ width: 100%;
 
 .apply-btn {
   width: 100%;
-  border: var(--section-border);
-    color: var(--color-primary);
 
 }
 
 .apply-btn:hover {
 background: var(--primary-gradient);
-  color: white;
 }
 
 
@@ -117,7 +125,7 @@ background: var(--primary-gradient);
 .mainContainer .mainContent{
     width: 80%;
     flex-direction: column;
-    padding-inline: 0;
+    /* padding-inline: 0; */
     gap: 1rem;
     border: none;
 }
@@ -171,6 +179,7 @@ background: var(--primary-gradient);
   flex-direction: column;
   gap: 20px;
   padding-bottom: 20px;
+  /* height: 2530px; */
 }
 
 .productCard {
@@ -185,10 +194,14 @@ background: var(--primary-gradient);
   transition: all 0.3s ease;
 }
 
-.productCard:hover {
+.productCard:hover{
     transform: scale(1.01);
   box-shadow: 0 5px 24px rgba(0, 0, 0, 0.15);
 
+}
+
+.productCard.hidden {
+  display: none !important;
 }
 
 .productCard img {
@@ -252,38 +265,47 @@ color: var(--secondary-font-color);
   width: 40px;
   height: 40px;
   padding: 5px;
+    transition: all 0.3s ease;
+
   }
 
 .favBtn.active,
 .favBtn:hover {
-  background: var(--dark-color-background);
+  background: var(--secondary-font-color);
+}
+.favBtn svg path {
+  fill: var(--color-primary); 
 }
 
+.favBtn:hover svg path {
+  fill: white; 
+
+}
 /* Pagination Styling */
-.listview-main .paginationSection {
+main .paginationSection {
   justify-content: space-between;
-  width: 25%;
+  /* width: 30%; */
   align-self: flex-end;
-}
-.paginationInfo select {
-  padding: 6px 10px;
-  padding-right: 2rem;
+  margin-inline: 1rem;
+      border: var(--section-border);
 }
 
-.paginationControls .pageBtn {
-  border: var(--section-border);
+.pageBtn {
+  border: 1px solid var(--secondary-font-color);
+  border-radius: 2px;
+  width: 50px;
   background-color: white;
-  width: 40px;
   transition: all 0.3s ease;
 }
 
 .pageBtn:hover,
 .pageBtn.active {
-  color: var(--secondary-font-color);
-  background: var(--dark-color-background);
+  color: white;
+  background: var(--base-color-light);
 }
-.arrowBtn:hover,
-.arrowBtn.active {
-  color: var(--secondary-font-color);
-  background: white;
+
+.pageBtn:disabled {
+  opacity: 0.9;
+  cursor: default;
 }
+
