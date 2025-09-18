@@ -24,13 +24,12 @@ ul.breadcrumb li + li:before {
  
 /* Sidebar Section Styling */
 .sidebar {
-    border-top: var(--section-border);
   width: 20%;
   }
 
 .sidebar-section {
   padding-block: 15px;
-  border-bottom: var(--section-border);
+  border-top: var(--section-border);
 
 }
 

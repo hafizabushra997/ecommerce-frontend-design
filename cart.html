@@ -6,17 +6,20 @@
     <title>Ecommerce Website</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/section-style.css" />
-    <link rel="stylesheet" href="css/product-listview.css" />
     <link rel="stylesheet" href="css/product-detail.css" />
     <link rel="stylesheet" href="css/cart.css" />
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
   </head>
   <body>
-      <!-- Header -->
+    <!-- Header -->
     <header>
       <div class="container headerSection flex">
         <div class="brandLogo">
           <a href="index.html"><img src="assets/images/logo-colored.png" alt="" /></a>
+        </div>
+        <div class="searchForm flex">
+          <input type="text" placeholder="Search" class="searchInput" />
+          <button class="searchBtn btn-text btn-primary">Search</button>
         </div>
           <ul class="userActions flex">
             <li>
@@ -51,14 +54,14 @@
                 ></a>
             </li>
             <li>
-              <a href="cart.html" class="flex"
-                >
+              <a href="cart.html" class="flex cart-link">
+                
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29989 16.7997C5.14491 16.7997 4.21043 17.7447 4.21043 18.8997C4.21043 20.0546 5.14491 20.9996 6.29989 20.9996C7.45487 20.9996 8.39985 20.0546 8.39985 18.8997C8.39985 17.7447 7.45487 16.7997 6.29989 16.7997ZM0 1.04998C0 1.62747 0.472492 2.09996 1.04998 2.09996H2.09996L5.8799 10.0693L4.46242 12.6313C3.69593 14.0383 4.70392 15.7497 6.29989 15.7497H17.8497C18.4272 15.7497 18.8997 15.2772 18.8997 14.6997C18.8997 14.1223 18.4272 13.6498 17.8497 13.6498H6.29989L7.45487 11.5498H15.2772C16.0647 11.5498 16.7577 11.1193 17.1147 10.4683L20.8736 3.65394C21.2621 2.96095 20.7581 2.09996 19.9601 2.09996H4.42042L3.71693 0.598489C3.54894 0.230996 3.17094 0 2.77195 0H1.04998C0.472492 0 0 0.472492 0 1.04998ZM16.7997 16.7997C15.6447 16.7997 14.7102 17.7447 14.7102 18.8997C14.7102 20.0546 15.6447 20.9996 16.7997 20.9996C17.9547 20.9996 18.8997 20.0546 18.8997 18.8997C18.8997 17.7447 17.9547 16.7997 16.7997 16.7997Z" fill="#8B96A5"/>
-</svg><span class="text-small"
-                  >My Cart</span
-                ></a
-              >
+</svg>
+<span class="text-small">My Cart</span>
+<span id="cartCount"></span>
+</a>
             </li>
           </ul>
       </div>
@@ -67,7 +70,7 @@
     <!-- Main Cart Section -->
 <section class="container mainCartSection">
     <p id="cartTitle" class="title-h4">
-      My Cart&nbsp;(<span id="cartCount">0</span>)
+      My Cart (0)
     </p>
 
 <div class="mainCartContainer flex">
@@ -91,7 +94,7 @@
             </div>
         </div>
          <div class="cart-item-qty flex">
-          <p class="text-title">$78.99</p>
+          <p class="text-title item-price">$78.99</p>
           <input type="number" name="item-qty" id="item-qty" class="input-basic" placeholder="Qty">
                 </div>
     </div>
@@ -112,7 +115,7 @@
             </div>
         </div>
          <div class="cart-item-qty flex">
-          <p class="text-title">$78.99</p>
+          <p class="text-title item-price">$78.99</p>
           <input type="number" name="item-qty" id="item-qty" class="input-basic" placeholder="Qty">
                 </div>
     </div>
@@ -133,11 +136,12 @@
             </div>
         </div>
          <div class="cart-item-qty flex">
-          <p class="text-title">$78.99</p>
+          <p class="text-title item-price">$78.99</p>
           <input type="number" name="item-qty" id="item-qty" class="input-basic" placeholder="Qty">
                 </div>
     </div>
 </div>
+
     <div class="cart-footer flex">
      <button onclick="window.location.href='product-listview.html'" class="btn-text btn-primary btn-back">← Back to shop</button>
      <button class="btn-text btn-basic btn-removeAll">Remove All</button>
@@ -153,9 +157,12 @@
     <!-- Coupon Section -->
     <div class="coupon-section flex">
         <p class="text-base">Have a Coupon?</p>
-        <div class="coupon-input flex">
-            <input type="text" class="input-basic" placeholder="Add a coupen">
-            <button class="btn-basic btn-text">Apply</button>
+        <div class="coupon-form flex">
+            <div class="flex coupon-input-div">
+              <input type="text" class="input-basic coupon-input" placeholder="Add a coupen">
+            <p id="coupon-msg" class="text-small"></p>
+            </div>
+            <button class="btn-basic btn-text coupon-btn">Apply</button>
         </div>
     </div>
 
@@ -406,14 +413,30 @@ Have you ever finally just write dummy info
       
                 <section class="subFooterSection">
         <div class="container subFooter flex">
-          <p class="text-sm text-center sm:text-left">© 2023 Ecommerce.</p>
-          <div class="rightDiv flex">
-            <img src="assets/images/flag-image.png" alt="" />
-            <span>English</span>
-            <a href="#">
-              <img src="assets/icons/expand_less.png" alt="" />
-            </a>
-          </div>
+          <p>© 2023 Ecommerce.</p>
+      
+  <!--Custom Footer Language Dropdown -->
+  <div class="dropdown languageDropdown">
+    <button type="button" id="language-btn" class="flex text-base">
+      <span>English</span>
+     <img id="language-flag" src="assets/images/flags/us.png" alt="Flag"  height="18px">
+      <img src="assets/icons/expand_less.png" alt="▼">
+    </button>
+    <ul id="language-menu">
+            <li class="flex" data-language="English" data-flag="assets/images/flags/us.png">
+              English<img src="assets/images/flags/us.png" alt="">
+            </li>
+            
+            <li class="flex" data-language="French" data-flag="assets/images/flags/france.png">
+              French<img src="assets/images/flags/france.png" alt="">
+            </li>
+            
+            <li class="flex" data-language="German" data-flag="assets/images/flags/germany.png">
+              German<img src="assets/images/flags/germany.png" alt="">
+            </li>
+            
+        </ul>
+    </div>
         
         </div>
                 </section>

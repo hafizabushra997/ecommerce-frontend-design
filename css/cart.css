@@ -57,10 +57,9 @@ color: #FA3434;
 .cart-item-qty {
     gap: 0.5rem;
     flex-direction: column;
-    align-items: flex-start;
 }
 
-#item-qty {
+.qty-input {
   width: 80px;
   text-align: center;
 }
@@ -97,20 +96,25 @@ color: #FA3434;
 }
 
 
-.coupon-input {
+.coupon-form {
   width: 100%;
     gap: 10px;
+    align-items: flex-start;
 }
-
-.coupon-input input {
+.coupon-input-div{
+  flex-direction: column;
+  /* align-items: flex-start; */
+  gap: 15px;
+}
+.coupon-input {
     flex: 1;
 
     padding: 10px;
     }
-    .input-basic::placeholder{
+    .coupon-input::placeholder{
        color: var(--secondary-font-color);
 }
-    .coupon-input button{
+    .coupon-btn{
       width: 80px;
     }
 

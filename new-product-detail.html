@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/section-style.css" />
     <link rel="stylesheet" href="css/product-listview.css" />
-    <link rel="stylesheet" href="css/product-detail.css" />
+    <link rel="stylesheet" href="css/new-product-detail.css" />
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
   </head>
   <body>
@@ -135,288 +135,91 @@
       </div>
     </nav>
 
-      <!-- Breadcrumb Section -->
-       <section id="breadcrumbSection">
-      <div class="container breadcrumbContainer flex">
-<ul class="breadcrumb flex text-info">
-  <li>Home</li>
-  <li>Clothings</li>
-  <li>Men's wear</li>
-  <li>Summer Clothing</li>
-</ul>
+<!-- ========== Product Detail Page ========== -->
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › 
+  <a href="product-list.html">Category</a> › 
+  <span>Product Name</span>
+</div>
+
+<!-- Main Product Section -->
+<section class="product-detail container">
+  <!-- Left: Product Images -->
+  <div class="product-images">
+    <img src="assets/images/tech/1.jpg" alt="Product" class="main-img">
+    <div class="thumbnails">
+      <img src="assets/images/tech/1.jpg" alt="">
+      <img src="assets/images/tech/2.jpg" alt="">
+      <img src="assets/images/tech/3.jpg" alt="">
+    </div>
+  </div>
+
+  <!-- Right: Product Info -->
+  <div class="product-info">
+    <h1 class="product-title">Wireless Headphones</h1>
+    <div class="rating">
+      ⭐⭐⭐⭐☆ <span>(120 reviews)</span>
+    </div>
+    <p class="price">Rs. 2,500 <span class="old-price">Rs. 3,000</span></p>
+    <p class="short-desc">
+      High quality wireless headphones with noise cancellation and long battery life.
+    </p>
+
+    <div class="actions">
+      <label>Quantity:</label>
+      <input type="number" value="1" min="1">
+      <button class="btn add-cart">Add to Cart</button>
+      <button class="btn wishlist">♡ Wishlist</button>
+    </div>
   </div>
 </section>
 
-<!-- Product Detail Main Section -->
-<section id="productDetailMain">
-  <div class="container content-main flex">
-    
-    <!-- Gallery -->
-    <div class="gallery">
-      <img src="assets/images/product-details/1.png" alt="Main Product" class="mainImage" />
-      <div class="thumbnailRow flex">
-        <img src="assets/images/product-details/1.png" alt="Thumb" />
-        <img src="assets/images/product-details/2.png" alt="Thumb" />
-        <img src="assets/images/product-details/3.png" alt="Thumb" />
-        <img src="assets/images/product-details/4.png" alt="Thumb" />
-        <img src="assets/images/product-details/5.png" alt="Thumb" />
-        <img src="assets/images/product-details/1.png" alt="Thumb" />
-      </div>
-    </div>
-
-    <!-- Product Info -->
-    <div class="info flex">
-      <p class="productStatus text-info">✔ In stock</p>
-      <h1 class="title-h4">Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle</h1>
-      <div class="ratingRow flex text-base">
-        <span class="rating flex"><img src="assets/icons/4-star-rating.svg" alt="">7.5</span>
-        <span class="reviews flex"><img src="assets/icons/message.png" alt="">32 reviews</span>
-        <span class="soldItems flex"><img src="assets/icons/shop-basket.svg" alt="">154 sold</span>
-       </div>
-      <table class="infoTable">
-        <thead>
-          <tr>
-            <th class="title-h5 highlightPrice">
-              <p>$98.00</p>
-              <p class="text-small">50-100 pcs</p>
-            </th>
-            <th class="title-h5"><p>$98.00</p>
-              <p class="text-small">50-100 pcs</p>
-            </th>
-             <th class="title-h5"><p>$98.00</p>
-              <p class="text-small">50-100 pcs</p>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr><td>Price:</td><td>Negotiable</td></tr>
-        <tr><td>Type:</td><td>Classic shoes</td></tr>
-        <tr><td>Material:</td><td>Plastic material</td></tr>
-        <tr><td>Design:</td><td>Modern nice</td></tr>
-        <tr><td>Customization:</td><td>Customized logo and design custom packages</td></tr>
-        <tr><td>Protection:</td><td>Refund Policy</td></tr>
-        <tr><td>Warranty:</td><td>2 years full warranty</td></tr>
-      </tbody>
-      
-      </table>
-      
-    </div>
-
-    <!-- Seller Info -->
-    <div class="sellerInfo flex">
-      <div class="sellerCard flex">
-        <div class="supplierName flex">
-              <img src="assets/images/product-details/supplier.png" alt="" />
-              <p class="text-info">
-                Supplier <br/>
-                Guanjoi Trading LLC
-              </p>
-            </div>
-          <hr>
-          <div class="supplyIcons flex">
-            <img src="assets/images/flag-image.png" alt="">
-            <p class="text-info">
-                Germany, Berlin
-              </p>
-          </div>
-          <div class="supplyIcons flex">
-            <img src="assets/icons/verified_user.png" alt="">
-            <p class="text-info">
-                Verified Seller
-              </p>
-          </div>
-          <div class="supplyIcons flex">
-            <img src="assets/icons/web.svg" alt="">
-            <p class="text-info">
-                Worldwide shipping
-              </p>
-          </div>
-          <hr>
-            <button class="btn-text btn-primary">Send inquiry</button>
-            <button class="btn-text btn-basic">Seller's profile</button>
-      </div>         
-
-<button id="cartBtn" class="cart-btn btn-text btn-basic flex">
-      <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.1675 11.9167C15.855 11.9167 16.46 11.5408 16.7716 10.9725L20.0533 5.02334C20.3925 4.41834 19.9525 3.66668 19.2558 3.66668H5.68912L4.82746 1.83334H1.82996V3.66668H3.66329L6.96329 10.6242L5.72579 12.8608C5.05662 14.0892 5.93662 15.5833 7.32996 15.5833H18.33V13.75H7.32996L8.33829 11.9167H15.1675ZM6.55996 5.50001H17.6975L15.1675 10.0833H8.73246L6.55996 5.50001ZM7.32996 16.5C6.32162 16.5 5.50579 17.325 5.50579 18.3333C5.50579 19.3417 6.32162 20.1667 7.32996 20.1667C8.33829 20.1667 9.16329 19.3417 9.16329 18.3333C9.16329 17.325 8.33829 16.5 7.32996 16.5ZM16.4966 16.5C15.4883 16.5 14.6725 17.325 14.6725 18.3333C14.6725 19.3417 15.4883 20.1667 16.4966 20.1667C17.505 20.1667 18.33 19.3417 18.33 18.3333C18.33 17.325 17.505 16.5 16.4966 16.5Z" fill="#0D6EFD"/>
-</svg>
-    Move to cart
-    </button>
-    </div>
-
-  </div>
-</section>
-
-<!-- Block Detail Section -->
-<section class="container blockDetailSection flex">
-
-  <!-- Left Content: Tabs + Description -->
-  <div class="blockDetail">
-
-    <!-- Tabs -->
-    <div class="tabHeader flex">
-      <button class="btn-text btn-basic tabBtn active">Description</button>
-      <button class="btn-text btn-basic tabBtn">Reviews</button>
-      <button class="btn-text btn-basic tabBtn">Shipping</button>
-      <button class="btn-text btn-basic tabBtn">About seller</button>
-    </div>
-
-    <!-- Tab Content -->
-    <div class="tabContent flex">
-      <p class="text-info">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-       </p>
-
-      <table class="detailTable">
-        <tbody>
-          <tr><td>Model</td><td>#8786867</td></tr>
-          <tr><td>Style</td><td>Classic style</td></tr>
-          <tr><td>Certificate</td><td>ISO-89892121</td></tr>
-          <tr><td>Size</td><td>34mm x 450mm x 19mm</td></tr>
-          <tr><td>Memory</td><td>36GB RAM</td></tr>
-        </tbody>
-      </table>
-
-      <ul class="featureList flex">
-        <li class="flex"><img src="assets/icons/check-icon.png" alt="">Some great feature name here</li>
-        <li class="flex"><img src="assets/icons/check-icon.png" alt="">Lorem ipsum dolor sit amet, consectetur</li>
-        <li class="flex"><img src="assets/icons/check-icon.png" alt="">Duis aute irure dolor in reprehenderit</li>
-        <li class="flex"><img src="assets/icons/check-icon.png" alt="">Some great feature name here</li>
-      </ul>
-    </div>
-
+<!-- Tabs Section -->
+<section class="product-tabs container">
+  <div class="tab-buttons">
+    <button class="tab active" data-tab="desc">Description</button>
+    <button class="tab" data-tab="reviews">Reviews</button>
+    <button class="tab" data-tab="related">Related Products</button>
   </div>
 
-      <!--Right Content Aside Section -->
-  <aside class="aside-section">
-    <h2 class="title-h6">You May Like</h2>
-    <div class="aside-products flex">
+  <div class="tab-content active" id="desc">
+    <h2>Product Description</h2>
+    <p>
+      These wireless headphones deliver crystal clear sound and deep bass.
+      Perfect for travel, work, and leisure with up to 30 hours of battery life.
+    </p>
+  </div>
 
-      <!-- Product Card#1 -->
-      <div class="aside-product-card flex">
-        <img src="assets/images/cloth/7.jpg" alt="Product 1" />
-        <div class="product-details flex">
-        <p class="text-info name">Men Blazers Sets Elegant Formal</p>
-        <p class="text-info price">$7.00 - $99.50</p>
-        </div>
-      </div>
+  <div class="tab-content active" id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">
+      <strong>Ali Khan</strong> ⭐⭐⭐⭐⭐  
+      <p>Excellent sound quality. Worth the price!</p>
+    </div>
+    <div class="review">
+      <strong>Sara Ahmed</strong> ⭐⭐⭐⭐☆  
+      <p>Comfortable to wear, battery lasts long.</p>
+    </div>
+  </div>
 
-       <!-- Product Card#2 -->
-      <div class="aside-product-card flex">
-        <img src="assets/images/cloth/1.jpg" alt="Product 1" />
-        <div class="product-details flex">
-        <p class="text-info name">Men Shirt Sleeve Polo Contrast</p>
-        <p class="text-info price">$7.00 - $99.50</p>
-        </div>
+  <div class="tab-content active" id="related">
+    <h2>Related Products</h2>
+    <div class="related-grid">
+      <div class="related-card">
+        <img src="assets/images/tech/2.jpg" alt="">
+        <p>Smartphone X200</p>
+        <span>Rs. 45,000</span>
       </div>
-     
-      <!-- Product Card#3 -->
-      <div class="aside-product-card flex">
-        <img src="assets/images/cloth/2.jpg" alt="Product 1" />
-        <div class="product-details flex">
-        <p class="text-info name">Men Blazers Sets Elegant Formal</p>
-        <p class="text-info price">$7.00 - $99.50</p>
-        </div>
+      <div class="related-card">
+        <img src="assets/images/tech/3.jpg" alt="">
+        <p>Bluetooth Speaker</p>
+        <span>Rs. 4,500</span>
       </div>
-
-      <!-- Product Card#4 -->
-      <div class="aside-product-card flex">
-        <img src="assets/images/cloth/3.jpg" alt="Product 1" />
-        <div class="product-details flex">
-        <p class="text-info name">Men Blazers Sets Elegant Formal</p>
-        <p class="text-info price">$7.00 - $99.50</p>
-        </div>
-      </div>
-
-      <!-- Product Card#5 -->
-      <div class="aside-product-card flex">
-        <img src="assets/images/cloth/4.jpg" alt="Product 1" />
-        <div class="product-details flex">
-        <p class="text-info name">Men Blazers Sets Elegant Formal</p>
-        <p class="text-info price">$7.00 - $99.50</p>
-        </div>
-      </div>
-
-      <!-- Product Card#6 -->
-      <div class="aside-product-card flex">
-        <img src="assets/images/cloth/6.jpg" alt="Product 1" />
-        <div class="product-details flex">
-        <p class="text-info name">Men Blazers Sets Elegant Formal</p>
-        <p class="text-info price">$7.00 - $99.50</p>
-        </div>
-      </div>
-
-      </div>
-  </aside>
+    </div>
+  </div>
 </section>
-
-
- <!-- Related Products Section -->
-    <section id="RelatedProductSection">
-      <div class="RelatedProductContainer container flex">
-        <p class="title-h4">Related Products</p>
-        <div class="relatedCardsContainer flex">
-
-          <!-- Product Card#1 -->
-          <div class="relatedProductCard flex">
-                          <img src="assets/images/cloth/6.jpg" alt="">
-            <div class="productDetails flex">
-              <p class="text-base name">Xiaomi Redmi 8 Original </p>
-              <p class="text-base price">$32.00-$40.00</p>
-            </div>
-          </div>
-
-          <!-- Product Card#2 -->
-          <div class="relatedProductCard flex">
-                          <img src="assets/images/cloth/2.jpg" alt="">
-            <div class="productDetails flex">
-              <p class="text-base name">Xiaomi Redmi 8 Original </p>
-              <p class="text-base price">$32.00-$40.00</p>
-            </div>
-          </div>
-
-          <!-- Product Card#3 -->
-          <div class="relatedProductCard flex">
-                          <img src="assets/images/cloth/3.jpg" alt="">
-            <div class="productDetails flex">
-              <p class="text-base name">Xiaomi Redmi 8 Original </p>
-              <p class="text-base price">$32.00-$40.00</p>
-            </div>
-          </div>
-
-          <!-- Product Card#4 -->
-          <div class="relatedProductCard flex">
-                          <img src="assets/images/cloth/4.jpg" alt="">
-            <div class="productDetails flex">
-              <p class="text-base name">Xiaomi Redmi 8 Original </p>
-              <p class="text-base price">$32.00-$40.00</p>
-            </div>
-          </div>
-
-          <!-- Product Card#5 -->
-          <div class="relatedProductCard flex">
-                          <img src="assets/images/cloth/5.jpg" alt="">
-            <div class="productDetails flex">
-              <p class="text-base name">Xiaomi Redmi 8 Original </p>
-              <p class="text-base price">$32.00-$40.00</p>
-            </div>
-          </div>
-
-          <!-- Product Card#6 -->
-          <div class="relatedProductCard flex">
-                          <img src="assets/images/cloth/6.jpg" alt="">
-            <div class="productDetails flex">
-              <p class="text-base name">Xiaomi Redmi 8 Original </p>
-              <p class="text-base price">$32.00-$40.00</p>
-            </div>
-          </div>
-
-
-        </div>
-        
-      </div>
-    </section>
 
  <!-- Discount Banner Section -->
       <section id="discountBanner">
@@ -521,3 +324,4 @@ Have you ever finally just write dummy info
         <script src="js/cart.js"></script>
   </body>
 </html>
+

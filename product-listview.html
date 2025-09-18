@@ -10,7 +10,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
   </head>
   <body>
-     <!-- Header -->
+   <!-- Header -->
     <header>
       <div class="container headerSection flex">
         <div class="brandLogo">
@@ -53,14 +53,14 @@
                 ></a>
             </li>
             <li>
-              <a href="cart.html" class="flex"
-                >
+              <a href="cart.html" class="flex cart-link">
+                
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29989 16.7997C5.14491 16.7997 4.21043 17.7447 4.21043 18.8997C4.21043 20.0546 5.14491 20.9996 6.29989 20.9996C7.45487 20.9996 8.39985 20.0546 8.39985 18.8997C8.39985 17.7447 7.45487 16.7997 6.29989 16.7997ZM0 1.04998C0 1.62747 0.472492 2.09996 1.04998 2.09996H2.09996L5.8799 10.0693L4.46242 12.6313C3.69593 14.0383 4.70392 15.7497 6.29989 15.7497H17.8497C18.4272 15.7497 18.8997 15.2772 18.8997 14.6997C18.8997 14.1223 18.4272 13.6498 17.8497 13.6498H6.29989L7.45487 11.5498H15.2772C16.0647 11.5498 16.7577 11.1193 17.1147 10.4683L20.8736 3.65394C21.2621 2.96095 20.7581 2.09996 19.9601 2.09996H4.42042L3.71693 0.598489C3.54894 0.230996 3.17094 0 2.77195 0H1.04998C0.472492 0 0 0.472492 0 1.04998ZM16.7997 16.7997C15.6447 16.7997 14.7102 17.7447 14.7102 18.8997C14.7102 20.0546 15.6447 20.9996 16.7997 20.9996C17.9547 20.9996 18.8997 20.0546 18.8997 18.8997C18.8997 17.7447 17.9547 16.7997 16.7997 16.7997Z" fill="#8B96A5"/>
-</svg><span class="text-small"
-                  >My Cart</span
-                ></a
-              >
+</svg>
+<span class="text-small">My Cart</span>
+<span id="cartCount"></span>
+</a>
             </li>
           </ul>
       </div>
@@ -159,7 +159,7 @@
     <div class="sidebar-header flex">
       <p class="title-h6">Category</p>
       <button class="toggle-arrow">
-        <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+        <img class="arrow-icon" src="assets/icons/expand_more.svg" alt="" srcset="">
       </button>
     </div>
     <ul class="sidebar-content category-list">
@@ -181,7 +181,7 @@
     <p class="title-h6">Brands</p>
 
       <button class="toggle-arrow">
-               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+               <img class="arrow-icon" src="assets/icons/expand_more.svg" alt="" srcset="">
       </button>
     </div>
     <ul class="sidebar-content">
@@ -200,7 +200,7 @@
     <p class="title-h6">Features</p>
 
       <button class="toggle-arrow">
-               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+               <img class="arrow-icon" src="assets/icons/expand_more.svg" alt="" srcset="">
       </button>
     </div>
     <ul class="sidebar-content">
@@ -219,15 +219,15 @@
     <p class="title-h6">Price Range</p>
 
       <button class="toggle-arrow">
-               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+               <img class="arrow-icon" src="assets/icons/expand_more.svg" alt="" srcset="">
       </button>
     </div>
     <div class="sidebar-content">
-      <input  class="price-slider" type="range" min="0" max="1000" />
+      <input class="price-slider" type="range" min="0" max="1000" />
            
       <div class="price-inputs flex">
-        <input type="number" placeholder="Min" />
-        <input type="number" placeholder="Max" />
+        <input type="number" placeholder="Min: $0" />
+        <input type="number" placeholder="Max: $1000" />
       </div>
       <button class="apply-btn btn-text btn-basic">Apply</button>
     </div>
@@ -239,7 +239,7 @@
     <p class="title-h6">Conditions</p>
 
       <button class="toggle-arrow">
-               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+               <img class="arrow-icon" src="assets/icons/expand_more.svg" alt="" srcset="">
       </button>
     </div>
     <ul class="sidebar-content">
@@ -256,7 +256,7 @@
     <p class="title-h6">Ratings</p>
 
       <button class="toggle-arrow">
-               <img class="arrow-icon" src="assets/icons/expand_less.png" alt="" srcset="">
+               <img class="arrow-icon" src="assets/icons/expand_more.svg" alt="" srcset="">
       </button>
     </div> 
     <ul class="sidebar-content">
@@ -839,8 +839,8 @@ tempor incididunt ut labore et dolore magna aliqua</p>
 
     </section>
 
-    <!-- Footer -->
-   <footer>
+  <!-- Footer -->
+    <footer>
         <section class="container mainFooter flex">
           <div class="brandLogoCol flex columns">
             <img src="assets/images/logo-colored.png" alt="" />
@@ -920,9 +920,10 @@ tempor incididunt ut labore et dolore magna aliqua</p>
         
         </div>
                 </section>
-    </footer>
-    
+    </footer>  
+
 <script src="js/app.js"></script>
 <script src="js/product-list.js"></script>
+<script src="js/cart.js"></script>
   </body>
 </html>

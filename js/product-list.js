@@ -17,213 +17,12 @@ document.querySelectorAll(".sidebar-section").forEach(section => {
 // <-----------------------xxx------------------------>
 
 
-//   // Filter Functionality  of Hero/ Category Section Menu links
-// // Get all product cards
-// const products = document.querySelectorAll(".productCard");
-// const productsCountText = document.getElementById('productsCountText');
-// const productCategoryText = document.getElementById('productCategoryText');
-
-// // Get category from URL (?category=electronics)
-// const params = new URLSearchParams(window.location.search);
-// const category = params.get("category") || "all";
-// // Variable to count visible products
-// let visibleProductsCount = 0;
-
-// // Filter products
-// products.forEach(product => {
-//   const productCategory = product.getAttribute("data-category");
-//   if (category === "all" || productCategory === category) {
-//     product.classList.remove("hidden");
-//     // increase counter if product is visible
-//         visibleProductsCount++; 
-
-//   } else {
-//     product.classList.add("hidden");
-//   }
-// });
-
-// productsCountText.innerText=visibleProductsCount;
-// // Highlight active filter link
-// const filterLinks = document.querySelectorAll(".filter-link");
-
-// filterLinks.forEach(link => {
-//   const url = new URL(link.href);
-  
-//   const linkCategory = url.searchParams.get("category");
-// if (category==='all') {
-//   filterLinks[0].classList.add('active');
-    
-//     productCategoryText.textContent = "All Products";
-
-// } else {
-//   if (linkCategory === category) {
-//     link.classList.add("active");
-//     productCategoryText.textContent=category.charAt(0).toUpperCase() + category.slice(1);
-
-//   }
-  
-//   else {
-//     link.classList.remove("active");
-//   }
-// }
-  
-// });
-
-
-// // <-----------------------xxx------------------------>
-
-// // Price Range Elements
-// const applyBtn = document.querySelector(".apply-btn");
-// const minInput = document.querySelector(".price-inputs input[placeholder='Min']");
-// const maxInput = document.querySelector(".price-inputs input[placeholder='Max']");
-// const rangeSlider = document.querySelector(".price-slider");
-
-// // Rating Elements
-// const ratingCheckboxes = document.querySelectorAll("#ratingCheckbox");
-
-// // ---------------- Combined Filter Function ----------------
-// function filterProducts() {
-//   // --- Get Price Range ---
-//   const min = parseFloat(minInput.value) || 0;
-//   const max = parseFloat(maxInput.value) || 1000;
-
-//   // --- Get Selected Ratings ---
-//   const selectedRatings = Array.from(ratingCheckboxes)
-//     .filter(cb => cb.checked)
-//     .map(cb => parseInt(cb.dataset.rating));
-
-//   // --- Loop Through Products ---
-//   products.forEach(product => {
-//     // Product Price
-//     const priceText = product.querySelector(".price").innerText;
-//     const price = parseFloat(priceText.replace("$", "").replace(",", ""));
-
-//     // Product Rating
-//     const productRating = parseInt(product.dataset.rating);
-
-//     // Conditions
-//     const priceMatch = price >= min && price <= max;
-//     const ratingMatch = selectedRatings.length === 0 || selectedRatings.includes(productRating);
-
-//     // Show only if both match
-//     product.style.display = (priceMatch && ratingMatch) ? "flex" : "none";
-//   });
-// }
-
-// // ---------------- Events ----------------
-
-// // Apply button for price range
-// applyBtn.addEventListener("click", () => {
-//   rangeSlider.min = parseFloat(minInput.value) || 0;
-//   rangeSlider.max = parseFloat(maxInput.value) || 1000;
-//   rangeSlider.value = rangeSlider.max;
-//   filterProducts();
-// });
-
-// // Slider change
-// rangeSlider.addEventListener("input", () => {
-//   const min = parseFloat(rangeSlider.min) || 0;
-//   const max = parseFloat(rangeSlider.value);
-//   minInput.value = min;
-//   maxInput.value = max;
-//   filterProducts();
-// });
-
-// // Rating checkboxes change
-// ratingCheckboxes.forEach(checkbox => {
-//   checkbox.addEventListener("change", filterProducts);
-// });
-
-// // <-----------------------xxx------------------------>
-
-
-// // Pagination Section Functionality 
-
-//     // Select pagination buttons
-//     const paginationSection = document.getElementById("pagination");
-//     const pageButtons = paginationSection.querySelectorAll(".pageBtn");
-//     const prevBtn = pageButtons[0]; // First button = Previous
-//     const nextBtn = pageButtons[pageButtons.length - 1]; // Last button = Next
-
-//     // Number of items to show on each page
-//     const itemsPerPage = 5;
-
-//     // Keep track of the current page
-//     let currentPage = 1;
-
-//     // Calculate total pages (round up)
-//     const totalPages = Math.ceil(products.length / itemsPerPage);
-
-//     // Function to show products based on current page
-//     function showPage(page) {
-//       // Hide all products first
-//       products.forEach((product) => (product.style.display = "none"));
-
-//       // Calculate the start and end index
-//       const start = (page - 1) * itemsPerPage;
-//       const end = start + itemsPerPage;
-
-//       // Show products within the range
-//       products.forEach((product, index) => {
-//         if (index >= start && index < end) {
-//           product.style.display = "flex"; // Use your layout display type
-//         }
-//       });
-
-//       // Update button states (disable/enable)
-//       prevBtn.disabled = page === 1; // Disable on first page
-//       nextBtn.disabled = page === totalPages; // Disable on last page
-
-//       // Remove 'active' class from all numbered buttons
-//       pageButtons.forEach((btn) => {
-//           btn.classList.remove("active");
-//       });
-
-//       // Add 'active' class to the current page button
-//       if (page <= totalPages) {
-//         pageButtons[page].classList.add("active"); 
-//       }
-//     }
-
-//     // Attach click event to pagination buttons
-//     pageButtons.forEach((btn, index) => {
-//       // First button = Previous
-//       if (index === 0) {
-//         btn.addEventListener("click", () => {
-//           if (currentPage > 1) {
-//             currentPage--;
-//             showPage(currentPage);
-//           }
-//         });
-//       }
-//       // Last button = Next
-//       else if (index === pageButtons.length - 1) {
-//         btn.addEventListener("click", () => {
-//           if (currentPage < totalPages) {
-//             currentPage++;
-//             showPage(currentPage);
-//           }
-//         });
-//       }
-//       // Number buttons
-//       else {
-//         btn.addEventListener("click", () => {
-//           currentPage = index; // Button 1 -> page 1, button 2 -> page 2
-//           showPage(currentPage);
-//         });
-//       }
-//     });
-
-//     // Initial page load
-//     showPage(currentPage);
- 
-
 // ================== GLOBAL VARIABLES ==================
 
 // All products
 const products = document.querySelectorAll(".productCard");
 
-// Text placeholders for UI updates
+// Text placeholders for UI updates (Page Title Section)
 const productsCountText = document.getElementById("productsCountText");
 const productCategoryText = document.getElementById("productCategoryText");
 
@@ -250,15 +49,18 @@ const itemsPerPage = 5;
 
 // State variables
 let currentPage = 1;
-let filteredProducts = Array.from(products); // this will always hold "currently filtered" products
+// this will always hold "currently filtered" products
+let filteredProducts = Array.from(products); 
 
 
 // ================== MAIN FILTER FUNCTION ==================
 function applyAllFilters(selectedCategory) {
   // Step 1: Get filters
-  const category = selectedCategory || "all";
+  const category = selectedCategory || "all";  //Category Filters
+  // Range Filters
   const min = parseFloat(minInput.value) || 0;
   const max = parseFloat(maxInput.value) || 1000;
+  // Rating Filters
   const selectedRatings = Array.from(ratingCheckboxes)
     .filter(cb => cb.checked)
     .map(cb => parseInt(cb.dataset.rating));
@@ -362,7 +164,7 @@ rangeSlider.addEventListener("input", () => {
 // Rating checkboxes
 ratingCheckboxes.forEach(checkbox => {
   checkbox.addEventListener("change", () => {
-    applyAllFilters(getActiveCategory());
+    applyAllFilters(getActiveCategory()); 
   });
 });
 
@@ -405,32 +207,18 @@ function getActiveCategory() {
 // ================== INITIAL LOAD ==================
 const params = new URLSearchParams(window.location.search);
 const initialCategory = params.get("category") || "all";
+
+// ✅ Highlight correct active link on page load
+filterLinks.forEach(link => {
+  const url = new URL(link.href);
+  const linkCategory = url.searchParams.get("category") || "all";
+  if (linkCategory === initialCategory) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+
+// Apply filters on load
 applyAllFilters(initialCategory);
-
-// // Highlight active filter link
-// const filterLinks = document.querySelectorAll(".filter-link");
-
-// filterLinks.forEach(link => {
-//   const url = new URL(link.href);
-  
-//   const linkCategory = url.searchParams.get("category");
-// if (category==='all') {
-//   filterLinks[0].classList.add('active');
-    
-//     productCategoryText.textContent = "All Products";
-
-// } else {
-//   if (linkCategory === category) {
-//     link.classList.add("active");
-//     productCategoryText.textContent=category.charAt(0).toUpperCase() + category.slice(1);
-
-//   }
-  
-//   else {
-//     link.classList.remove("active");
-//   }
-// }
-  
-// });
-
 
